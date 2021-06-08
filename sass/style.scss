@@ -1,0 +1,67 @@
+/* style.scss */
+
+@import "./utils/variables";
+.cardSelection {
+    background-color: $primary-color;
+}
+
+@media all and (min-width: 769px) and (max-width: 1440px) {
+    display: none;
+}
+
+@media all and (max-width: 768px) {
+    body {
+        font-family: 'Roboto', sans-serif;
+        width: 100%;
+        margin: 0;
+        header {
+            justify-content: center;
+            section {
+                display: flex;
+                background-color: white;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
+                background-size: 5%;
+                overflow: hidden;
+                box-shadow: 0px 2px 5px #d8d1;
+                width: 100%;
+            }
+            img {
+                height: 20px;
+            }
+            nav {
+                height: 300px;
+                width: 100%;
+                div:nth-child(1) {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    background-color: rgb(221, 210, 210);
+                    align-items: center;
+                    height: 35px;
+                    div {
+                        margin-right: 3%;
+                    }
+                }
+                div:nth-child(2) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-content: center;
+                }
+                .btn {
+                    border-radius: 50px;
+                    width: auto;
+                    height: 30px;
+                    padding: 5px;
+                    background: linear-gradient( $secondary-color, $primary-color);
+                    color: white;
+                    &:focus {
+                        background-color: darken($color: $primary-color, $amount: 10%);
+                    }
+                }
+            }
+        }
+    }
+}
