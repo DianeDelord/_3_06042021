@@ -1,10 +1,7 @@
-@@ -0,
-0+1,
-299 @@ body {
+body {
     font-family: "Roboto", sans-serif;
     width: 100%;
     margin: 0;
-    word-break: break-all;
 }
 
 p {
@@ -13,8 +10,15 @@ p {
     white-space: nowrap;
 }
 
+
+/* Header */
+
+header {
+    height: 290px;
+}
+
 .fixedStrip {
-    height: 50px;
+    height: 40px;
     width: 100%;
     background-color: white;
     display: flex;
@@ -34,7 +38,7 @@ nav {
 }
 
 .localisation {
-    background-color: blueviolet;
+    background-color: rgb(175, 171, 171);
     height: 50px;
     display: flex;
     justify-content: center;
@@ -51,25 +55,22 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: green;
     width: 80%;
     margin: auto;
     height: 200px;
     align-content: center;
-}
-
-.welcomeText {
-    display: flex;
     text-align: center;
-    align-items: center;
 }
 
 .welcomeText h1 {
     font-size: 110%;
+    hyphens: manual;
 }
 
 .welcomeText p {
     font-size: 75%;
+    hyphens: manual;
+    white-space: normal;
 }
 
 a {
@@ -79,7 +80,7 @@ a {
 .btn {
     display: flex;
     width: 110%;
-    background-color: blueviolet;
+    background: linear-gradient(#9356DC, #FF79DA);
     border-radius: 25px;
     font-size: 70%;
     color: white;
@@ -94,15 +95,13 @@ a {
 /* Fonctionnement */
 
 article {
-    height: 300px;
+    height: 285px;
     width: 100%;
-    background-color: aqua;
     display: flex;
     flex-direction: column;
 }
 
-h2,
-h4 {
+h2 {
     font-size: 100%;
     margin: 0;
     padding: 30px 5%;
@@ -170,22 +169,31 @@ aside {
     display: flex;
     width: 100%;
     flex-direction: column;
-    height: 820px;
-    background-color: coral;
-    padding: 5% 0
+    height: 850px;
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+h4 {
+    font-size: 100%;
+    margin: 0;
+    padding: 30px 5% 15px;
 }
 
 .cardPictureTop {
     height: 195px;
-    width: 95%;
+    width: 90%;
     border-radius: 10px;
     box-shadow: 5px 5px 5px grey;
     overflow: hidden;
-    margin: 3%;
+    margin: 0 5% 5% 5%;
     background-color: white;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+}
+
+.cardPictureTop :nth-child(5) {
+    margin-bottom: 20%;
 }
 
 
@@ -216,13 +224,8 @@ aside {
 
 .text {
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    height: 40px;
     padding: 0.2em 0.5em;
-    width: 90%;
     line-height: 1em;
-    background-color: aqua;
 }
 
 h5 {
@@ -230,6 +233,8 @@ h5 {
     flex-direction: column;
     margin: auto;
     text-align: left;
+    color: black;
+    font-size: 90%;
 }
 
 .text p {
@@ -239,47 +244,70 @@ h5 {
     padding: 0;
     margin: auto;
     text-align: left;
+    color: grey;
+    font-size: 70%;
 }
 
 .nouveau {
-    display: inline-block;
-    float: right;
-    background-color: crimson;
+    background-color: rgb(150, 199, 150);
     position: absolute;
     top: 10px;
     left: 80%;
     height: 15px;
     width: 15%;
-    text-align: center;
-    vertical-align: middle;
 }
 
 .nouveau p {
+    display: flex;
     font-size: 50%;
-    color: azure;
+    color: rgb(13, 110, 13);
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    height: 15px;
 }
 
 .fa-heart {
     position: absolute;
-    top: 130px;
+    top: 135px;
     left: 90%;
+    color: grey;
+}
+
+
+/* coeur */
+
+
+/*  https://openclassrooms.com/forum/sujet/changement-progressive-dun-icone    */
+
+.fa-heart {
+    color: grey;
+    padding: .2em;
+}
+
+.fa-heart::before {
+    content: "\f004";
+    font-weight: bold;
+    transition: color 2s ease-out;
+}
+
+.fa-heart:hover::before {
+    color: red;
+    cursor: pointer;
 }
 
 
 /* Footer */
 
 footer {
-    width: 100%;
-    height: 150px;
-    background-color: black;
-    padding: 5%;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    width: 100%;
+    height: 170px;
+    background-color: rgb(46, 44, 44);
 }
 
 .footer__content {
-    width: 90%;
+    margin: 7% 5%;
 }
 
 .footer__img {
