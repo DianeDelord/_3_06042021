@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: $flexDir;
 }
 
 
@@ -12,4 +11,25 @@
     @media screen and (max-width: map-get($map: breakpoint, $key: mobile)) {
         @content;
     }
+}
+
+
+/* éclaircir au survol la couleur de fond des boutons + ombre portée forcée */
+
+
+/*
+@mixin heading-shadow($colour: lightgrey) {
+    @if ( lightness($colour) < 25%) {
+        $colour: lighten($colour, 10%);
+    }
+    @else {
+        $colour: darken($colour, 10%);
+    }
+    box-shadow: darken($colour, 10%);
+}
+*/
+
+@mixin shadow-radius ($shadow-size:$shadow, $radius:$radius25) {
+    box-shadow: $shadow;
+    border-radius: $radius25;
 }

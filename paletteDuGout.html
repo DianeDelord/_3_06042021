@@ -7,24 +7,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis." rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="sass/style.css">
     <script src="https://kit.fontawesome.com/b7afbb8d12.js" crossorigin="anonymous"></script>
     <title>ohmyfood</title>
 </head>
 
 <body>
+    <!-- loader -->
+    <div class="loader">
+        <span class="letter">o</span>
+        <span class="letter">h</span>
+        <span class="letter">m</span>
+        <span class="letter">y</span>
+        <span class="letter">f</span>
+        <span class="letter">o</span>
+        <span class="letter">o</span>
+        <span class="letter">d</span>
+    </div>
     <!-- Header -->
     <header>
-        <section class="stripLogo">
-            <img src="images/logo/ohmyfood.png" alt="logo Oh My Food" />
+        <section class="fixedStrip">
+            <img src="images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood" />
         </section>
 
-        <nav>
+        <nav class="goBack">
             <a href="index.html"><i class="fas fa-arrow-left"></i></a>
         </nav>
 
-        <section>
+        <section class="bigPicture">
             <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du restaurant La palette du goût" />
         </section>
 
@@ -33,58 +46,58 @@
 
     <!-- choix menu-->
 
-    <article>
-        <div class="title">
+    <article class="cardSection">
+        <div class="cardSection__title">
             <h5>La palette du goût</h5>
             <i class="far fa-heart"></i>
         </div>
 
-        <div>
+        <div class="cardSection__checkbox">
             <h6>Entrées</h6>
-            <div>
+            <div class="button__checkbox">
                 <p>Fricassée d'escargot</p>
                 <p>Au piment d'Espelette</p>
                 <p>25€</p>
             </div>
-            <div>
+            <div class="button__checkbox">
                 <p>Foie gras de canard mi-cuit</p>
                 <p>Et ses copeaux de truffe noire</p>
                 <p>35€</p>
             </div>
-            <div>
+            <div class="button__checkbox">
                 <p>Oeuf au plat</p>
                 <p>Assaisonné à la truffe sur lit de caviar</p>
                 <p>20€</p>
             </div>
             <h6>Plats</h6>
-            <div>
+            <div class="button__checkbox">
                 <p>Filet de boeuf aux herbes</p>
                 <p>Accompagné de sa ribambelle de légumes</p>
                 <p>40€</p>
             </div>
-            <div>
+            <div class="button__checkbox">
                 <p>Parmentier de queue de boeuf</p>
                 <p>À la truffe noire sur sa purée de panais</p>
                 <p>35€</p>
             </div>
-            <div>
+            <div class="button__checkbox">
                 <p>Filet de turbot</p>
                 <p>Aux agrumes</p>
                 <p>44€</p>
             </div>
 
             <h6>Desserts</h6>
-            <div>
+            <div class="button__checkbox">
                 <p>Paris-Brest</p>
                 <p>Revisité</p>
                 <p>18€</p>
             </div>
-            <div>
+            <div class="button__checkbox">
                 <p>Macaron au chocolat d'exception</p>
                 <p>Et glace à la vanille de Madagascar</p>
                 <p>22€</p>
             </div>
-            <div>
+            <div class="button__checkbox">
                 <p>Mousse au chocolat</p>
                 <p>Au piment d'Espelette et à la truffe noire</p>
                 <p>23€</p>
@@ -99,11 +112,24 @@
     <!-- Footer  -->
 
     <footer>
-        <img src="images/logo/ohmyfood@2x.svg">
-        <p><i class="fas fa-utensils"></i>Proposer un restaurant</p>
-        <p><i class="fas fa-hands-helping"></i>Devenir partenaire</p>
-        <p>Mentions légales</p>
-        <p>Contact</p>
+        <div class="footer__content">
+            <div class="footer__img">
+                <img src="images/logo/ohmyfood_white.svg">
+            </div>
+            <a href="#">
+                <p><i class="fas fa-utensils"></i>Proposer un restaurant</p>
+            </a>
+            <a href="#">
+                <p><i class="fas fa-hands-helping"></i>Devenir partenaire</p>
+            </a>
+            <a href="#">
+                <p>Mentions légales</p>
+            </a>
+            <a href="mailto:contact@mohmyfood.fr">
+                <p>Contact</p>
+            </a>
+            </a>
+        </div>
     </footer>
 
 </body>

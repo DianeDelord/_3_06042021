@@ -1,6 +1,18 @@
 @charset "UTF-8";
 /* style.scss */
 /* à compléter */
+/* éclaircir au survol la couleur de fond des boutons + ombre portée forcée */
+/*
+@mixin heading-shadow($colour: lightgrey) {
+    @if ( lightness($colour) < 25%) {
+        $colour: lighten($colour, 10%);
+    }
+    @else {
+        $colour: darken($colour, 10%);
+    }
+    box-shadow: darken($colour, 10%);
+}
+*/
 /* loader */
 @keyframes flash {
   0% {
@@ -24,7 +36,14 @@
     height: 0;
     overflow: hidden;
     visibility: hidden; } }
-/* */
+/* dégradé bouton explorer */
+@keyframes gradient {
+  0% {
+    background-color: #FF79DA; }
+  90% {
+    background-color: #9356DC; }
+  100% {
+    background-color: #FF79DA; } }
 /* loader */
 .loader {
   position: absolute;
@@ -48,7 +67,7 @@
 .letter {
   color: black;
   font-family: 'Shrikhand', cursive;
-  font-size: 4vmin;
+  font-size: 6vmin;
   letter-spacing: -2px;
   -moz-animation: flash 1.2s ease-out 3s infinite;
   -webkit-animation: flash 1.2s ease-out 3s infinite;
@@ -86,13 +105,15 @@ body {
   width: 100%;
   margin: 0; }
 
+/*
 p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap; }
-
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+*/
 /* Header */
-header {
+.welcomePage {
   height: 290px; }
 
 .fixedStrip {
@@ -103,18 +124,21 @@ header {
   justify-content: center;
   align-items: center;
   background-size: 35%;
-  box-shadow: 0px 3px 5px grey, 0px -3px 5px grey; }
+  border-bottom: grey 1px;
+  box-shadow: 0px 5px 5px grey;
+  position: relative;
+  top: 0; }
 
 .fixedStrip img {
   height: 20px; }
 
 nav {
-  height: 250px;
-  background-color: lightgray; }
+  height: 235px;
+  background-color: #f6f6f6; }
 
 .localisation {
-  background-color: #afabab;
-  height: 50px;
+  background-color: #dbd6d6;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,7 +165,9 @@ nav {
 .welcomeText p {
   font-size: 75%;
   hyphens: manual;
-  white-space: normal; }
+  white-space: normal;
+  color: #858280;
+  margin: 0 0 13px; }
 
 a {
   text-decoration: none; }
@@ -149,33 +175,33 @@ a {
 .btn {
   display: flex;
   width: 110%;
-  background: linear-gradient(#9356DC, #FF79DA);
-  border-radius: 25px;
   font-size: 70%;
   color: white;
   height: 30px;
   align-items: center;
   justify-content: center;
   margin: 5px 0;
-  box-shadow: 0px 3px 5px grey; }
+  box-shadow: 0px 3px 5px grey;
+  border-radius: 25px;
+  animation: gradient 5s ease-out 3s infinite; }
 
 /* Fonctionnement */
-article {
+.howTo {
   height: 285px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #9356DC; }
+  background-color: white; }
 
 h2 {
   font-size: 100%;
   margin: 0;
-  padding: 30px 5%; }
+  padding: 30px 5% 5px; }
 
 .cardSelection {
   display: flex;
   flex-direction: column;
-  background-color: aqua;
+  background-color: white;
   align-content: space-between;
   height: 200px;
   list-style: none; }
@@ -185,7 +211,6 @@ h2 {
   flex-direction: row;
   height: 60px;
   width: 90%;
-  background-color: #FF79DA;
   align-items: center; }
 
 .cardSelection__step p {
@@ -199,7 +224,10 @@ h2 {
   background-color: #9356DC;
   font-size: 60%;
   color: white;
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .cardSelection__button {
   display: flex;
@@ -210,19 +238,25 @@ h2 {
   height: 50px;
   width: 90%;
   border-radius: 15px;
-  background-color: coral;
+  background-color: #f6f6f6;
   margin: 5px 0;
-  padding: 0 20px; }
+  padding: 0 20px;
+  box-shadow: 0px 3px 5px grey; }
+
+.cardSelection__button:hover {
+  background-color: #f2eafb; }
 
 .cardSelection__button i {
   height: 20px;
   width: 20px;
-  border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 10px;
   color: grey; }
+
+.fas {
+  font-size: small; }
 
 .cardSelection__button h3 {
   font-size: 65%; }
@@ -313,7 +347,7 @@ h5 {
   justify-content: center;
   height: 15px; }
 
-.fa-heart {
+.text .fa-heart {
   position: absolute;
   top: 135px;
   left: 90%;
@@ -321,17 +355,17 @@ h5 {
 
 /* coeur */
 /*  https://openclassrooms.com/forum/sujet/changement-progressive-dun-icone    */
-.fa-heart {
+.text .fa-heart {
   color: grey;
   padding: .2em; }
 
-.fa-heart::before {
+.text .fa-heart ::before {
   content: "\f004";
   font-weight: bold;
-  transition: color 2s ease-out; }
+  transition: #9356DC 2s ease-out; }
 
-.fa-heart:hover::before {
-  color: red;
+.text .fa-heart :hover::before {
+  color: #9356DC;
   cursor: pointer; }
 
 /* Footer */
@@ -358,5 +392,87 @@ footer a {
 
 footer a:hover {
   text-decoration: underline; }
+
+/* palette du gout */
+.goBack {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 20px;
+  background-color: white; }
+
+.bigPicture img {
+  display: flex;
+  width: 100%;
+  height: 270px;
+  background-size: cover; }
+
+/* choix menu */
+.cardSection {
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 30px 30px;
+  border-top-right-radius: 30px 30px;
+  background-color: white;
+  height: 780px;
+  position: relative;
+  top: -50px;
+  padding: 3%; }
+
+.cardSection__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+.cardSection__title h5 {
+  font-family: 'Shrikhand', cursive;
+  display: flex;
+  justify-content: left;
+  font-size: x-large;
+  margin: 20px 0 10px; }
+
+.cardSection__title .fa-heart {
+  position: relative;
+  margin: 10px 10px 0; }
+
+.cardSection__checkbox {
+  height: 790px;
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.cardSection__checkbox h6 {
+  text-transform: uppercase;
+  border-bottom: solid 2px #99E2D0;
+  padding-bottom: 3px;
+  margin-bottom: 15px;
+  width: 7%; }
+
+.button__checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  border-radius: 15px;
+  background-color: #f6f6f6;
+  margin: 5px 0;
+  padding: 0 20px;
+  box-shadow: 0px 3px 5px grey; }
+
+.button__checkbox p {
+  line-height: 1px;
+  justify-content: left;
+  text-align: center; }
+
+/* reponsive tablette */
+/* reponsive desktop */
+@media all and (min-width: 1220px) {
+  .cardSelection {
+    flex-direction: row;
+    height: 100px; }
+
+  aside {
+    flex-direction: row; } }
 
 /*# sourceMappingURL=style.css.map */

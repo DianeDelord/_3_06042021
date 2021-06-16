@@ -34,4 +34,16 @@
 }
 
 
-/* */
+/* dégradé bouton explorer */
+
+@keyframes gradient {
+    0% {
+        background-color: $color-secondary;
+    }
+    90% {
+        background-color: $color-primary;
+    }
+    100% {
+        background-color: $color-secondary;
+    }
+}
