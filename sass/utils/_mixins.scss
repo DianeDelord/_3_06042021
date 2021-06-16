@@ -1,0 +1,15 @@
+@mixin centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $flexDir;
+}
+
+
+/* à compléter */
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($map: breakpoint, $key: mobile)) {
+        @content;
+    }
+}

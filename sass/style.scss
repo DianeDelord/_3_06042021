@@ -1,75 +1,412 @@
 /* style.scss */
 
 @import "./utils/variables";
-@media all and (min-width: 769px) and (max-width: 1440px) {
-    display: none;
+@import "./utils/mixins";
+@import "./utils/fonctions";
+
+/* loader */
+
+.loader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgb(0, 0, 0);
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    -webkit-animation: hideLoader 0s ease-in 3s forwards;
+    animation: hideLoader 0s ease-in 3s forwards;
+    overflow: hidden;
 }
 
-@media all and (max-width: 768px) {
-    body {
-        font-family: $font;
-        width: 100%;
-        margin: 0;
-        height: 5000px;
-    }
-    a:link {
-        text-decoration: none;
-    }
-    header {
-        .fixedStrip {
-            display: flex;
-            background-color: white;
-            justify-content: center;
-            align-items: center;
-            height: 35px;
-            background-size: 5%;
-            overflow: hidden;
-            box-shadow: 0px 2px 5px #d8d1;
-            width: 100%;
-            img {
-                height: 20px;
-            }
-        }
-        nav {
-            height: 300px;
-            width: 100%;
-            background-color: grey;
-            .localisation {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                background-color: rgb(221, 210, 210);
-                align-items: center;
-                height: 35px;
-            }
-            .welcomeText {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                height: 200px;
-                .btn {
-                    border-radius: 50px;
-                    width: fit-content;
-                    height: 30px;
-                    padding: 5px;
-                    background: linear-gradient( $secondary-color, $primary-color);
-                    color: white;
-                    &:focus {
-                        background-color: darken($color: $primary-color, $amount: 10%);
-                    }
-                }
-            }
-        }
-    }
-    .cardSelection {
-        background-color: $primary-color;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        div {
-            flex-direction: row;
-            align-items: center;
-        }
-    }
+.letter {
+    color: black;
+    font-family: 'Shrikhand', cursive;
+    font-size: 4vmin;
+    letter-spacing: -2px;
+    -moz-animation: flash 1.2s ease-out 3s infinite;
+    -webkit-animation: flash 1.2s ease-out 3s infinite;
+    -ms-animation: flash 1.2s ease-out 3s infinite;
+    -o-animation: flash 1.2s ease-out 3s infinite;
+    animation: flash 1.2s ease-out 3s infinite;
+}
+
+.letter:nth-child(1) {
+    animation-delay: .05s;
+}
+
+.letter:nth-child(2) {
+    animation-delay: .1s;
+}
+
+.letter:nth-child(3) {
+    animation-delay: .15s;
+}
+
+.letter:nth-child(4) {
+    animation-delay: .2s;
+}
+
+.letter:nth-child(5) {
+    animation-delay: .25s;
+}
+
+.letter:nth-child(6) {
+    animation-delay: .3s;
+}
+
+.letter:nth-child(7) {
+    animation-delay: .35s;
+}
+
+.letter:nth-child(8) {
+    animation-delay: .4s;
+}
+
+
+/* */
+
+body {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    margin: 0;
+}
+
+p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* Header */
+
+header {
+    height: 290px;
+}
+
+.fixedStrip {
+    height: 40px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 35%;
+    box-shadow: 0px 3px 5px grey, 0px -3px 5px grey;
+}
+
+.fixedStrip img {
+    height: 20px;
+}
+
+nav {
+    height: 250px;
+    background-color: lightgray;
+}
+
+.localisation {
+    background-color: rgb(175, 171, 171);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80%;
+}
+
+.fas {
+    margin-right: 6px;
+}
+
+.welcomeText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    height: 200px;
+    align-content: center;
+    text-align: center;
+}
+
+.welcomeText h1 {
+    font-size: 110%;
+    hyphens: manual;
+}
+
+.welcomeText p {
+    font-size: 75%;
+    hyphens: manual;
+    white-space: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: flex;
+    width: 110%;
+    background: linear-gradient(#9356DC, #FF79DA);
+    border-radius: 25px;
+    font-size: 70%;
+    color: white;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    box-shadow: 0px 3px 5px grey;
+}
+
+
+/* Fonctionnement */
+
+article {
+    height: 285px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #9356DC;
+}
+
+h2 {
+    font-size: 100%;
+    margin: 0;
+    padding: 30px 5%;
+}
+
+.cardSelection {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    align-content: space-between;
+    height: 200px;
+    list-style: none;
+}
+
+.cardSelection__step {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 90%;
+    background-color: #FF79DA;
+    align-items: center;
+}
+
+.cardSelection__step p {
+    margin: auto;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: 0;
+    left: 3%;
+    border-radius: 50px;
+    background-color: $color-primary;
+    font-size: 60%;
+    color: white;
+    text-align: center;
+}
+
+.cardSelection__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    width: 90%;
+    border-radius: 15px;
+    background-color: coral;
+    margin: 5px 0;
+    padding: 0 20px;
+}
+
+.cardSelection__button i {
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    color: grey;
+}
+
+.cardSelection__button h3 {
+    font-size: 65%;
+}
+
+
+/* Restaurant */
+
+aside {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 850px;
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+h4 {
+    font-size: 100%;
+    margin: 0;
+    padding: 30px 5% 15px;
+}
+
+.cardPictureTop {
+    height: 195px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+    overflow: hidden;
+    margin: 0 5% 5% 5%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardPictureTop :nth-child(5) {
+    margin-bottom: 20%;
+}
+
+
+/* Dézoomer */
+
+.zoomOut {
+    transform: scale(1);
+    transition: .3s ease-in-out;
+}
+
+.zoomOut:hover {
+    transform: scale(0.9);
+}
+
+.cardPictureTop a {
+    display: block;
+}
+
+
+/* */
+
+.cardPictureTop img {
+    width: 100%;
+    height: 117px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.text {
+    background-color: white;
+    padding: 0.2em 0.5em;
+    line-height: 1em;
+}
+
+h5 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: left;
+    color: black;
+    font-size: 90%;
+}
+
+.text p {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    margin: auto;
+    text-align: left;
+    color: grey;
+    font-size: 70%;
+}
+
+.nouveau {
+    background-color: rgb(150, 199, 150);
+    position: absolute;
+    top: 10px;
+    left: 80%;
+    height: 15px;
+    width: 15%;
+}
+
+.nouveau p {
+    display: flex;
+    font-size: 50%;
+    color: rgb(13, 110, 13);
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    height: 15px;
+}
+
+.fa-heart {
+    position: absolute;
+    top: 135px;
+    left: 90%;
+    color: grey;
+}
+
+
+/* coeur */
+
+
+/*  https://openclassrooms.com/forum/sujet/changement-progressive-dun-icone    */
+
+.fa-heart {
+    color: grey;
+    padding: .2em;
+}
+
+.fa-heart::before {
+    content: "\f004";
+    font-weight: bold;
+    transition: color 2s ease-out;
+}
+
+.fa-heart:hover::before {
+    color: red;
+    cursor: pointer;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 170px;
+    background-color: rgb(46, 44, 44);
+    padding: 0 0 20px;
+}
+
+.footer__content {
+    margin: 7% 5%;
+}
+
+.footer__img {
+    display: flex;
+    height: 20px;
+}
+
+footer p {
+    font-size: 65%;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

@@ -8,12 +8,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="ohmyfood.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sass/style.css">
     <script src="https://kit.fontawesome.com/b7afbb8d12.js" crossorigin="anonymous"></script>
     <title>ohmyfood</title>
 </head>
 
 <body>
+    <!-- loader -->
+    <div class="loader">
+        <span class="letter">o</span>
+        <span class="letter">h</span>
+        <span class="letter">m</span>
+        <span class="letter">y</span>
+        <span class="letter">f</span>
+        <span class="letter">o</span>
+        <span class="letter">o</span>
+        <span class="letter">d</span>
+    </div>
+
     <!-- Header -->
     <header>
         <section class="fixedStrip">
@@ -45,28 +59,32 @@
 
     <article>
         <h2>Fontionnement</h2>
-        <div class="cardSelection">
-            <div class="cardSelection__step">
+        <ul class="cardSelection">
+
+            <li class="cardSelection__step">
                 <p>1</p>
                 <div class="cardSelection__button">
                     <i class="fas fa-mobile-alt"></i>
                     <h3>Choisissez un restaurant</h3>
                 </div>
-            </div>
-            <div class="cardSelection__step">
+            </li>
+
+            <li class="cardSelection__step">
                 <p>2</p>
                 <div class="cardSelection__button">
                     <i class="fas fa-list-ul"></i>
                     <h3>Composez votre menu</h3>
                 </div>
-            </div>
-            <div class="cardSelection__step">
+            </li>
+            <li class="cardSelection__step">
                 <p>3</p>
                 <div class="cardSelection__button">
                     <i class="fas fa-store"></i>
                     <h3>Dégustez au restaurant</h3>
                 </div>
-            </div>
+            </li>
+        </ul>
+
         </div>
     </article>
 
