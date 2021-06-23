@@ -26,8 +26,13 @@ $delay-appearing :200ms;
     flex-direction: column;
     margin: 0;
     padding: 0;
-    animation: appearing 1.5s ease-in-out;
+}
+
+.card-selection,
+h6 {
     /* mon animation apparition des plats progressive */
+    opacity: 0;
+    animation: appearing 1.5s ease-in-out forwards;
     @for $i from 1 through 20 {
         &:nth-child(#{$i}) {
             -webkit-animation-delay: (0.2s * $i);

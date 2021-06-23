@@ -249,86 +249,110 @@
   align-items: center;
   flex-direction: column;
   margin: 0;
-  padding: 0;
-  animation: appearing 1.5s ease-in-out;
-  /* mon animation apparition des plats progressive */ }
-  .card-selection:nth-child(1) {
+  padding: 0; }
+
+.card-selection,
+h6 {
+  /* mon animation apparition des plats progressive */
+  opacity: 0;
+  animation: appearing 1.5s ease-in-out forwards; }
+  .card-selection:nth-child(1),
+  h6:nth-child(1) {
     -webkit-animation-delay: 0.2s;
     -moz-animation-delay: 0.2s;
     animation-delay: 0.2s; }
-  .card-selection:nth-child(2) {
+  .card-selection:nth-child(2),
+  h6:nth-child(2) {
     -webkit-animation-delay: 0.4s;
     -moz-animation-delay: 0.4s;
     animation-delay: 0.4s; }
-  .card-selection:nth-child(3) {
+  .card-selection:nth-child(3),
+  h6:nth-child(3) {
     -webkit-animation-delay: 0.6s;
     -moz-animation-delay: 0.6s;
     animation-delay: 0.6s; }
-  .card-selection:nth-child(4) {
+  .card-selection:nth-child(4),
+  h6:nth-child(4) {
     -webkit-animation-delay: 0.8s;
     -moz-animation-delay: 0.8s;
     animation-delay: 0.8s; }
-  .card-selection:nth-child(5) {
+  .card-selection:nth-child(5),
+  h6:nth-child(5) {
     -webkit-animation-delay: 1s;
     -moz-animation-delay: 1s;
     animation-delay: 1s; }
-  .card-selection:nth-child(6) {
+  .card-selection:nth-child(6),
+  h6:nth-child(6) {
     -webkit-animation-delay: 1.2s;
     -moz-animation-delay: 1.2s;
     animation-delay: 1.2s; }
-  .card-selection:nth-child(7) {
+  .card-selection:nth-child(7),
+  h6:nth-child(7) {
     -webkit-animation-delay: 1.4s;
     -moz-animation-delay: 1.4s;
     animation-delay: 1.4s; }
-  .card-selection:nth-child(8) {
+  .card-selection:nth-child(8),
+  h6:nth-child(8) {
     -webkit-animation-delay: 1.6s;
     -moz-animation-delay: 1.6s;
     animation-delay: 1.6s; }
-  .card-selection:nth-child(9) {
+  .card-selection:nth-child(9),
+  h6:nth-child(9) {
     -webkit-animation-delay: 1.8s;
     -moz-animation-delay: 1.8s;
     animation-delay: 1.8s; }
-  .card-selection:nth-child(10) {
+  .card-selection:nth-child(10),
+  h6:nth-child(10) {
     -webkit-animation-delay: 2s;
     -moz-animation-delay: 2s;
     animation-delay: 2s; }
-  .card-selection:nth-child(11) {
+  .card-selection:nth-child(11),
+  h6:nth-child(11) {
     -webkit-animation-delay: 2.2s;
     -moz-animation-delay: 2.2s;
     animation-delay: 2.2s; }
-  .card-selection:nth-child(12) {
+  .card-selection:nth-child(12),
+  h6:nth-child(12) {
     -webkit-animation-delay: 2.4s;
     -moz-animation-delay: 2.4s;
     animation-delay: 2.4s; }
-  .card-selection:nth-child(13) {
+  .card-selection:nth-child(13),
+  h6:nth-child(13) {
     -webkit-animation-delay: 2.6s;
     -moz-animation-delay: 2.6s;
     animation-delay: 2.6s; }
-  .card-selection:nth-child(14) {
+  .card-selection:nth-child(14),
+  h6:nth-child(14) {
     -webkit-animation-delay: 2.8s;
     -moz-animation-delay: 2.8s;
     animation-delay: 2.8s; }
-  .card-selection:nth-child(15) {
+  .card-selection:nth-child(15),
+  h6:nth-child(15) {
     -webkit-animation-delay: 3s;
     -moz-animation-delay: 3s;
     animation-delay: 3s; }
-  .card-selection:nth-child(16) {
+  .card-selection:nth-child(16),
+  h6:nth-child(16) {
     -webkit-animation-delay: 3.2s;
     -moz-animation-delay: 3.2s;
     animation-delay: 3.2s; }
-  .card-selection:nth-child(17) {
+  .card-selection:nth-child(17),
+  h6:nth-child(17) {
     -webkit-animation-delay: 3.4s;
     -moz-animation-delay: 3.4s;
     animation-delay: 3.4s; }
-  .card-selection:nth-child(18) {
+  .card-selection:nth-child(18),
+  h6:nth-child(18) {
     -webkit-animation-delay: 3.6s;
     -moz-animation-delay: 3.6s;
     animation-delay: 3.6s; }
-  .card-selection:nth-child(19) {
+  .card-selection:nth-child(19),
+  h6:nth-child(19) {
     -webkit-animation-delay: 3.8s;
     -moz-animation-delay: 3.8s;
     animation-delay: 3.8s; }
-  .card-selection:nth-child(20) {
+  .card-selection:nth-child(20),
+  h6:nth-child(20) {
     -webkit-animation-delay: 4s;
     -moz-animation-delay: 4s;
     animation-delay: 4s; }
