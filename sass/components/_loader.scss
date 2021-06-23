@@ -1,5 +1,3 @@
-        /* loader */
-        
         @keyframes flash {
             0% {
                 color: $color-secondary;
@@ -59,6 +57,13 @@
             -ms-animation: flash 1.2s ease-out 3s infinite;
             -o-animation: flash 1.2s ease-out 3s infinite;
             animation: flash 1.2s ease-out 3s infinite;
+            @for $i from 1 through 20 {
+                &:nth-child(#{$i}) {
+                    -webkit-animation-delay: (0.2s * $i);
+                    -moz-animation-delay: (0.2s * $i);
+                    animation-delay: (0.2s * $i);
+                }
+            }
         }
         
         .letter:nth-child(1) {
@@ -92,4 +97,3 @@
         .letter:nth-child(8) {
             animation-delay: .4s;
         }
-        /* */

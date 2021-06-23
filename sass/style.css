@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /* style.scss */
-/* loader */
 @keyframes flash {
   0% {
     color: #FF79DA;
@@ -48,6 +47,86 @@
   -ms-animation: flash 1.2s ease-out 3s infinite;
   -o-animation: flash 1.2s ease-out 3s infinite;
   animation: flash 1.2s ease-out 3s infinite; }
+  .letter:nth-child(1) {
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    animation-delay: 0.2s; }
+  .letter:nth-child(2) {
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    animation-delay: 0.4s; }
+  .letter:nth-child(3) {
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    animation-delay: 0.6s; }
+  .letter:nth-child(4) {
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    animation-delay: 0.8s; }
+  .letter:nth-child(5) {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s; }
+  .letter:nth-child(6) {
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    animation-delay: 1.2s; }
+  .letter:nth-child(7) {
+    -webkit-animation-delay: 1.4s;
+    -moz-animation-delay: 1.4s;
+    animation-delay: 1.4s; }
+  .letter:nth-child(8) {
+    -webkit-animation-delay: 1.6s;
+    -moz-animation-delay: 1.6s;
+    animation-delay: 1.6s; }
+  .letter:nth-child(9) {
+    -webkit-animation-delay: 1.8s;
+    -moz-animation-delay: 1.8s;
+    animation-delay: 1.8s; }
+  .letter:nth-child(10) {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s; }
+  .letter:nth-child(11) {
+    -webkit-animation-delay: 2.2s;
+    -moz-animation-delay: 2.2s;
+    animation-delay: 2.2s; }
+  .letter:nth-child(12) {
+    -webkit-animation-delay: 2.4s;
+    -moz-animation-delay: 2.4s;
+    animation-delay: 2.4s; }
+  .letter:nth-child(13) {
+    -webkit-animation-delay: 2.6s;
+    -moz-animation-delay: 2.6s;
+    animation-delay: 2.6s; }
+  .letter:nth-child(14) {
+    -webkit-animation-delay: 2.8s;
+    -moz-animation-delay: 2.8s;
+    animation-delay: 2.8s; }
+  .letter:nth-child(15) {
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s; }
+  .letter:nth-child(16) {
+    -webkit-animation-delay: 3.2s;
+    -moz-animation-delay: 3.2s;
+    animation-delay: 3.2s; }
+  .letter:nth-child(17) {
+    -webkit-animation-delay: 3.4s;
+    -moz-animation-delay: 3.4s;
+    animation-delay: 3.4s; }
+  .letter:nth-child(18) {
+    -webkit-animation-delay: 3.6s;
+    -moz-animation-delay: 3.6s;
+    animation-delay: 3.6s; }
+  .letter:nth-child(19) {
+    -webkit-animation-delay: 3.8s;
+    -moz-animation-delay: 3.8s;
+    animation-delay: 3.8s; }
+  .letter:nth-child(20) {
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    animation-delay: 4s; }
 
 .letter:nth-child(1) {
   animation-delay: .05s; }
@@ -73,7 +152,6 @@
 .letter:nth-child(8) {
   animation-delay: .4s; }
 
-/* */
 /* à compléter */
 /* éclaircir au survol la couleur de fond des boutons + ombre portée forcée */
 /*
@@ -176,11 +254,12 @@
       margin-right: 0;
       transition: opacity 300ms 200ms ease-in-out; }
 
+/* animation */
 @keyframes appearing {
   0% {
     opacity: 0; }
   25% {
-    opacity: .5; }
+    opacity: .2; }
   50% {
     transform: translateY(5%); }
   75% {
@@ -194,38 +273,90 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
-  animation: appearing 1.5s ease-in; }
+  animation: appearing 1.5s ease-in;
+  /* mon animation apparition des plats progressive */ }
+  .card-selection:nth-child(1) {
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    animation-delay: 0.2s; }
+  .card-selection:nth-child(2) {
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    animation-delay: 0.4s; }
+  .card-selection:nth-child(3) {
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    animation-delay: 0.6s; }
+  .card-selection:nth-child(4) {
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    animation-delay: 0.8s; }
+  .card-selection:nth-child(5) {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s; }
+  .card-selection:nth-child(6) {
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    animation-delay: 1.2s; }
+  .card-selection:nth-child(7) {
+    -webkit-animation-delay: 1.4s;
+    -moz-animation-delay: 1.4s;
+    animation-delay: 1.4s; }
+  .card-selection:nth-child(8) {
+    -webkit-animation-delay: 1.6s;
+    -moz-animation-delay: 1.6s;
+    animation-delay: 1.6s; }
+  .card-selection:nth-child(9) {
+    -webkit-animation-delay: 1.8s;
+    -moz-animation-delay: 1.8s;
+    animation-delay: 1.8s; }
+  .card-selection:nth-child(10) {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s; }
+  .card-selection:nth-child(11) {
+    -webkit-animation-delay: 2.2s;
+    -moz-animation-delay: 2.2s;
+    animation-delay: 2.2s; }
+  .card-selection:nth-child(12) {
+    -webkit-animation-delay: 2.4s;
+    -moz-animation-delay: 2.4s;
+    animation-delay: 2.4s; }
+  .card-selection:nth-child(13) {
+    -webkit-animation-delay: 2.6s;
+    -moz-animation-delay: 2.6s;
+    animation-delay: 2.6s; }
+  .card-selection:nth-child(14) {
+    -webkit-animation-delay: 2.8s;
+    -moz-animation-delay: 2.8s;
+    animation-delay: 2.8s; }
+  .card-selection:nth-child(15) {
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s; }
+  .card-selection:nth-child(16) {
+    -webkit-animation-delay: 3.2s;
+    -moz-animation-delay: 3.2s;
+    animation-delay: 3.2s; }
+  .card-selection:nth-child(17) {
+    -webkit-animation-delay: 3.4s;
+    -moz-animation-delay: 3.4s;
+    animation-delay: 3.4s; }
+  .card-selection:nth-child(18) {
+    -webkit-animation-delay: 3.6s;
+    -moz-animation-delay: 3.6s;
+    animation-delay: 3.6s; }
+  .card-selection:nth-child(19) {
+    -webkit-animation-delay: 3.8s;
+    -moz-animation-delay: 3.8s;
+    animation-delay: 3.8s; }
+  .card-selection:nth-child(20) {
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    animation-delay: 4s; }
 
-.card-selection--1 {
-  animation-delay: 200ms; }
-
-.card-selection--2 {
-  animation-delay: 400ms; }
-
-.card-selection--3 {
-  animation-delay: 600ms; }
-
-.card-selection--4 {
-  animation-delay: 800ms; }
-
-.card-selection--5 {
-  animation-delay: 1000ms; }
-
-.card-selection--6 {
-  animation-delay: 1200ms; }
-
-.card-selection--7 {
-  animation-delay: 1400ms; }
-
-.card-selection--8 {
-  animation-delay: 1600ms; }
-
-.card-selection--9 {
-  animation-delay: 1800ms; }
-
-.card-selection--10 {
-  animation-delay: 2000ms; }
-
+/* */
 .card-selection__content {
   display: flex;
   flex-direction: row;
@@ -318,6 +449,68 @@
 .card-selection__content:hover > .card-selection__text {
   width: 60%; }
 
+/* hauteur de page classique avec
+3 entrées, 3 plats et 3 desserts */
+.cardSection {
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 30px 30px;
+  border-top-right-radius: 30px 30px;
+  background-color: white;
+  position: relative;
+  top: -50px;
+  /*height: $classic-height;*/
+  width: 95%;
+  margin: 0;
+  padding: 2.5%;
+  list-style-type: none;
+  counter-reset: countSelection;
+  /* la longueur de cardSection s'adapte s'il y a + de plats que les 9 de base */ }
+  .cardSection .card-selection:before {
+    counter-increment: countSelection 1;
+    height: calc($classic-height+($card-selection__content-height*(countSelection-9))); }
+
+/*
+
+.card-selection--1 {
+    animation-delay: 200ms;
+}
+
+.card-selection--2 {
+    animation-delay: 400ms;
+}
+
+.card-selection--3 {
+    animation-delay: 600ms;
+}
+
+.card-selection--4 {
+    animation-delay: 800ms;
+}
+
+.card-selection--5 {
+    animation-delay: 1000ms;
+}
+
+.card-selection--6 {
+    animation-delay: 1200ms;
+}
+
+.card-selection--7 {
+    animation-delay: 1400ms;
+}
+
+.card-selection--8 {
+    animation-delay: 1600ms;
+}
+
+.card-selection--9 {
+    animation-delay: 1800ms;
+}
+
+.card-selection--10 {
+    animation-delay: 2000ms;
+}*/
 body {
   font-family: "Roboto", sans-serif;
   width: 100%;
@@ -591,22 +784,12 @@ footer a:hover {
   display: flex;
   width: 100%;
   height: 270px;
-  background-size: cover; }
+  background-size: cover;
+  object-fit: cover; }
 
 /* choix menu */
 fieldset {
   border: none; }
-
-.cardSection {
-  display: flex;
-  flex-direction: column;
-  border-top-left-radius: 30px 30px;
-  border-top-right-radius: 30px 30px;
-  background-color: white;
-  height: 750px;
-  position: relative;
-  top: -50px;
-  padding: 3%; }
 
 .cardSection__title {
   display: flex;
@@ -620,14 +803,6 @@ fieldset {
   justify-content: left;
   font-size: x-large;
   margin: 20px 0 10px; }
-
-.cardSection {
-  height: 790px;
-  width: 95%;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 2.5%; }
 
 .cardSection h6 {
   text-transform: uppercase;

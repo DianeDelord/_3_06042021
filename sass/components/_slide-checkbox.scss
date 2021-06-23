@@ -1,9 +1,11 @@
+/* animation */
+
 @keyframes appearing {
     0% {
         opacity: 0;
     }
     25% {
-        opacity: .5;
+        opacity: .2;
     }
     50% {
         transform: translateY(5%);
@@ -16,6 +18,7 @@
     }
 }
 
+$delay-appearing :200ms;
 .card-selection {
     display: flex;
     justify-content: center;
@@ -24,47 +27,18 @@
     margin: 0;
     padding: 0;
     animation: appearing 1.5s ease-in;
+    /* mon animation apparition des plats progressive */
+    @for $i from 1 through 20 {
+        &:nth-child(#{$i}) {
+            -webkit-animation-delay: (0.2s * $i);
+            -moz-animation-delay: (0.2s * $i);
+            animation-delay: (0.2s * $i);
+        }
+    }
 }
 
-.card-selection--1 {
-    animation-delay: 200ms;
-}
 
-.card-selection--2 {
-    animation-delay: 400ms;
-}
-
-.card-selection--3 {
-    animation-delay: 600ms;
-}
-
-.card-selection--4 {
-    animation-delay: 800ms;
-}
-
-.card-selection--5 {
-    animation-delay: 1000ms;
-}
-
-.card-selection--6 {
-    animation-delay: 1200ms;
-}
-
-.card-selection--7 {
-    animation-delay: 1400ms;
-}
-
-.card-selection--8 {
-    animation-delay: 1600ms;
-}
-
-.card-selection--9 {
-    animation-delay: 1800ms;
-}
-
-.card-selection--10 {
-    animation-delay: 2000ms;
-}
+/* */
 
 .card-selection__content {
     display: flex;
@@ -169,3 +143,78 @@
 .card-selection__content:hover>.card-selection__text {
     width: 60%;
 }
+
+
+/* hauteur de page classique avec
+3 entrées, 3 plats et 3 desserts */
+
+$classic-height:900px;
+$card-selection__content-height: 4.25rem;
+.cardSection {
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    background-color: white;
+    position: relative;
+    top: -50px;
+    /*height: $classic-height;*/
+    width: 95%;
+    margin: 0;
+    padding: 2.5%;
+    list-style-type: none;
+    counter-reset: countSelection;
+    /* la longueur de cardSection s'adapte s'il y a + de plats que les 9 de base */
+    .card-selection:before {
+        counter-increment: countSelection 1;
+        @if countSelection==9 {
+            height: $classic-height;
+        }
+        @else {
+            height: calc($classic-height+($card-selection__content-height*(countSelection-9)));
+        }
+    }
+}
+
+
+/*
+
+.card-selection--1 {
+    animation-delay: 200ms;
+}
+
+.card-selection--2 {
+    animation-delay: 400ms;
+}
+
+.card-selection--3 {
+    animation-delay: 600ms;
+}
+
+.card-selection--4 {
+    animation-delay: 800ms;
+}
+
+.card-selection--5 {
+    animation-delay: 1000ms;
+}
+
+.card-selection--6 {
+    animation-delay: 1200ms;
+}
+
+.card-selection--7 {
+    animation-delay: 1400ms;
+}
+
+.card-selection--8 {
+    animation-delay: 1600ms;
+}
+
+.card-selection--9 {
+    animation-delay: 1800ms;
+}
+
+.card-selection--10 {
+    animation-delay: 2000ms;
+}*/
