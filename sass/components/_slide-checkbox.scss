@@ -1,0 +1,171 @@
+@keyframes appearing {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: .5;
+    }
+    50% {
+        transform: translateY(5%);
+    }
+    75% {
+        opacity: .75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.card-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    animation: appearing 1.5s ease-in;
+}
+
+.card-selection--1 {
+    animation-delay: 200ms;
+}
+
+.card-selection--2 {
+    animation-delay: 400ms;
+}
+
+.card-selection--3 {
+    animation-delay: 600ms;
+}
+
+.card-selection--4 {
+    animation-delay: 800ms;
+}
+
+.card-selection--5 {
+    animation-delay: 1000ms;
+}
+
+.card-selection--6 {
+    animation-delay: 1200ms;
+}
+
+.card-selection--7 {
+    animation-delay: 1400ms;
+}
+
+.card-selection--8 {
+    animation-delay: 1600ms;
+}
+
+.card-selection--9 {
+    animation-delay: 1800ms;
+}
+
+.card-selection--10 {
+    animation-delay: 2000ms;
+}
+
+.card-selection__content {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    align-items: unset;
+    border-radius: 15px;
+    background: #fff;
+    height: 4.25rem;
+    width: 100%;
+    margin-bottom: 0.75rem;
+    overflow-x: hidden;
+    /*masquer place de la coche */
+    box-shadow: 0 5px 0.94rem 0 #c3c3c3;
+}
+
+.card-selection__text {
+    width: 82%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.card-selection__text>.card-selection__line1 {
+    display: inline-block;
+    margin: 0.75rem 0px 0.125rem 0.75rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 99;
+}
+
+.card-selection__text>.card-selection__line2 {
+    display: inline-block;
+    margin: 0px 0px 15px 0.75rem;
+    font-weight: 200;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-selection__sideText {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 0;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0px -2.5rem 0.78rem 0px;
+    font-weight: 500;
+}
+
+.card__slider {
+    display: inline-block;
+    position: relative;
+    width: 4rem;
+    background: #99E2D0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    left: 4rem;
+    opacity: 0;
+}
+
+.card__slider--picto {
+    display: inline-block;
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.card-selection__content:hover {
+    box-shadow: 0 5px 0.94rem 0 black;
+    transition: box-shadow 400ms;
+}
+
+.card-selection__content:hover>.card-selection__sideText {
+    transform: translateX(-1rem);
+    transition: transform 500ms ease-in-out;
+}
+
+.card-selection__content:hover>.card__slider {
+    transform: translateX(-4rem);
+    opacity: 1;
+    transition: transform 500ms ease-in-out;
+}
+
+.card-selection__content:hover>.card__slider>.card__slider--picto {
+    transform: rotate(-360deg);
+    transition: transform 800ms ease;
+}
+
+.card-selection__content:hover>.card-selection__text {
+    width: 60%;
+}

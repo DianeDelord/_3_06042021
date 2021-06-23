@@ -1,75 +1,11 @@
         /* style.scss */
         
         @import "./utils/variables";
+        @import "./components/loader";
         @import "./utils/mixins";
         @import "./utils/fonctions";
-        /* loader */
-        
-        .loader {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            background: rgb(0, 0, 0);
-            opacity: 1;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            -webkit-animation: hideLoader 0s ease-in 3s forwards;
-            animation: hideLoader 0s ease-in 3s forwards;
-            overflow: hidden;
-        }
-        
-        .letter {
-            color: black;
-            font-family: 'Shrikhand', cursive;
-            font-size: 6vmin;
-            letter-spacing: -2px;
-            -moz-animation: flash 1.2s ease-out 3s infinite;
-            -webkit-animation: flash 1.2s ease-out 3s infinite;
-            -ms-animation: flash 1.2s ease-out 3s infinite;
-            -o-animation: flash 1.2s ease-out 3s infinite;
-            animation: flash 1.2s ease-out 3s infinite;
-        }
-        
-        .letter:nth-child(1) {
-            animation-delay: .05s;
-        }
-        
-        .letter:nth-child(2) {
-            animation-delay: .1s;
-        }
-        
-        .letter:nth-child(3) {
-            animation-delay: .15s;
-        }
-        
-        .letter:nth-child(4) {
-            animation-delay: .2s;
-        }
-        
-        .letter:nth-child(5) {
-            animation-delay: .25s;
-        }
-        
-        .letter:nth-child(6) {
-            animation-delay: .3s;
-        }
-        
-        .letter:nth-child(7) {
-            animation-delay: .35s;
-        }
-        
-        .letter:nth-child(8) {
-            animation-delay: .4s;
-        }
-        /* */
-        
+        @import "./components/heart-effects";
+        @import "./components/slide-checkbox";
         body {
             font-family: "Roboto", sans-serif;
             width: 100%;
@@ -85,16 +21,15 @@
         /* Header */
         
         .welcomePage {
-            height: 290px;
+            height: 305px;
+            width: 100%;
         }
         
         .fixedStrip {
             height: 40px;
             width: 100%;
             background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include centered;
             background-size: 35%;
             border-bottom: grey 1px;
             box-shadow: 0px 5px 5px grey;
@@ -114,9 +49,7 @@
         .localisation {
             background-color: rgb(219, 214, 214);
             height: 35px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include centered;
             font-size: 80%;
         }
         
@@ -125,11 +58,9 @@
         }
         
         .welcomeText {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include centered;
             flex-direction: column;
-            width: 80%;
+            width: 90%;
             margin: auto;
             height: 200px;
             align-content: center;
@@ -153,105 +84,91 @@
             text-decoration: none;
         }
         
+        .welcomeText a {
+            display: block;
+        }
+        
         .btn {
-            display: flex;
-            width: 110%;
+            @include centered;
+            padding: 0.2rem 0.4rem;
+            width: 100%;
             font-size: 70%;
             color: white;
             height: 30px;
-            align-items: center;
-            justify-content: center;
             margin: 5px 0;
             @include shadow-radius;
             animation: gradient 5s ease-out 3s infinite;
         }
         /* Fonctionnement */
         
-        .howTo {
-            height: 285px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            background-color: white;
-        }
-        
         h2 {
             font-size: 100%;
-            margin: 0;
-            padding: 30px 5% 5px;
         }
         
-        .cardSelection {
-            display: flex;
-            flex-direction: column;
-            background-color: white;
-            align-content: space-between;
-            height: 200px;
-            list-style: none;
+        .card__step .fas {
+            font-size: small;
         }
         
-        .cardSelection__step {
-            display: flex;
-            flex-direction: row;
-            height: 60px;
-            width: 90%;
-            align-items: center;
+        .card {
+            padding: 2rem 1rem;
         }
         
-        .cardSelection__step p {
+        .container {
+            max-width: 1280px;
             margin: auto;
-            height: 20px;
-            width: 20px;
             position: relative;
-            top: 0;
-            left: 3%;
-            border-radius: 50px;
-            background-color: $color-primary;
-            font-size: 60%;
-            color: white;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
         
-        .cardSelection__button {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            text-align: center;
-            height: 50px;
-            width: 90%;
-            border-radius: 15px;
+        .card__title {
+            margin: 0 0 30px;
+        }
+        
+        .card__steps {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            counter-reset: countStep;
+        }
+        
+        .card__step {
+            padding: 1rem 1.5rem;
+            margin: 1rem 0 1rem .75rem;
+            box-shadow: 0.25rem 0.25rem 0.5rem grey;
+            border-radius: 1.25rem;
             background-color: #f6f6f6;
-            margin: 5px 0;
-            padding: 0 20px;
-            box-shadow: 0px 3px 5px grey;
-        }
-        
-        .cardSelection__button {
+            display: flex;
+            position: relative;
+            align-items: center;
+            height: 30px;
             &:hover {
                 background-color: lighten($color-primary, 35%);
             }
         }
         
-        .cardSelection__button i {
-            height: 20px;
-            width: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 10px;
-            color: grey;
+        .card__step:first-child {
+            margin-top: 0;
         }
         
-        .fas {
-            font-size: small;
+        .card__step:before {
+            counter-increment: countStep 1;
+            content: counter(countStep) " ";
+            background: $color-primary;
+            height: 1.5rem;
+            width: 1.5rem;
+            border-radius: 100px;
+            @include centered;
+            color: white;
+            position: absolute;
+            left: -.75rem;
         }
         
-        .cardSelection__button h3 {
-            font-size: 65%;
+        .card__icon {
+            margin-right: 1rem;
+            color: #7e7e7e;
+        }
+        
+        .stepText {
+            font-size: 80%;
         }
         /* Restaurant */
         
@@ -293,7 +210,7 @@
         }
         
         .zoomOut:hover {
-            transform: scale(0.9);
+            transform: scale(.95);
         }
         
         .cardPictureTop a {
@@ -309,7 +226,6 @@
         }
         
         .text {
-            background-color: white;
             padding: 0.2em 0.5em;
             line-height: 1em;
         }
@@ -335,7 +251,7 @@
         }
         
         .nouveau {
-            background-color: rgb(150, 199, 150);
+            background-color: $color-tertiary;
             position: absolute;
             top: 10px;
             left: 80%;
@@ -344,38 +260,11 @@
         }
         
         .nouveau p {
-            display: flex;
+            @include centered;
             font-size: 50%;
             color: rgb(13, 110, 13);
             margin: auto;
-            align-items: center;
-            justify-content: center;
             height: 15px;
-        }
-        
-        .text .fa-heart {
-            position: absolute;
-            top: 135px;
-            left: 90%;
-            color: grey;
-        }
-        /* coeur */
-        /*  https://openclassrooms.com/forum/sujet/changement-progressive-dun-icone    */
-        
-        .text .fa-heart {
-            color: grey;
-            padding: .2em;
-        }
-        
-        .text .fa-heart ::before {
-            content: "\f004";
-            font-weight: bold;
-            transition: $color-primary 2s ease-out;
-        }
-        
-        .text .fa-heart :hover::before {
-            color: $color-primary;
-            cursor: pointer;
         }
         /* Footer */
         
@@ -426,13 +315,17 @@
         }
         /* choix menu */
         
+        fieldset {
+            border: none;
+        }
+        
         .cardSection {
             display: flex;
             flex-direction: column;
             border-top-left-radius: 30px 30px;
             border-top-right-radius: 30px 30px;
             background-color: white;
-            height: 780px;
+            height: 750px;
             position: relative;
             top: -50px;
             padding: 3%;
@@ -453,19 +346,16 @@
             margin: 20px 0 10px;
         }
         
-        .cardSection__title .fa-heart {
-            position: relative;
-            margin: 10px 10px 0;
-        }
-        
-        .cardSection__checkbox {
+        .cardSection {
             height: 790px;
-            width: 100%;
+            width: 95%;
             display: flex;
             flex-direction: column;
+            margin: 0;
+            padding: 2.5%;
         }
         
-        .cardSection__checkbox h6 {
+        .cardSection h6 {
             text-transform: uppercase;
             border-bottom: solid 2px $color-tertiary;
             padding-bottom: 3px;
@@ -473,36 +363,25 @@
             width: 7%;
         }
         
-        .cardSection__checkbox div {}
-        
-        .button__checkbox {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            height: 50px;
-            border-radius: 15px;
-            background-color: #f6f6f6;
-            margin: 5px 0;
-            padding: 0 20px;
-            box-shadow: 0px 3px 5px grey;
+        h7 {
+            font-size: medium;
+            font-weight: 500;
         }
         
-        .button__checkbox p {
-            line-height: 1px;
-            justify-content: left;
-            text-align: center;
+        .order {
+            @include centered;
+            height: 80px;
+            padding-bottom: 10px;
+        }
+        
+        .cmd {
+            width: 50%;
+            height: 30px;
+            padding: 0px 30px;
         }
         /* reponsive tablette */
         
         @media all and (min-width: 769px) and (max-width: 1220px) {}
         /* reponsive desktop */
         
-        @media all and (min-width: 1220px) {
-            .cardSelection {
-                flex-direction: row;
-                height: 100px;
-            }
-            aside {
-                flex-direction: row;
-            }
-        }
+        @media all and (min-width: 1220px) {}

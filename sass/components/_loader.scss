@@ -1,0 +1,95 @@
+        /* loader */
+        
+        @keyframes flash {
+            0% {
+                color: $color-secondary;
+                text-shadow: 0 0 7px $color-secondary;
+            }
+            90% {
+                color: $color-primary;
+                text-shadow: none;
+            }
+            100% {
+                color: $color-secondary;
+                text-shadow: 0 0 7px $color-secondary;
+            }
+        }
+        
+        @-webkit-keyframes hideLoader {
+            to {
+                overflow: hidden;
+                visibility: hidden;
+            }
+        }
+        
+        @keyframes hideLoader {
+            to {
+                overflow: hidden;
+                visibility: hidden;
+            }
+        }
+        /* loader */
+        
+        .loader {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            background: rgb(0, 0, 0);
+            opacity: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            -webkit-animation: hideLoader 0s ease-in 3s forwards;
+            animation: hideLoader 0s ease-in 3s forwards;
+            overflow: hidden;
+        }
+        
+        .letter {
+            color: black;
+            font-family: 'Shrikhand', cursive;
+            font-size: 6vmin;
+            letter-spacing: -2px;
+            -moz-animation: flash 1.2s ease-out 3s infinite;
+            -webkit-animation: flash 1.2s ease-out 3s infinite;
+            -ms-animation: flash 1.2s ease-out 3s infinite;
+            -o-animation: flash 1.2s ease-out 3s infinite;
+            animation: flash 1.2s ease-out 3s infinite;
+        }
+        
+        .letter:nth-child(1) {
+            animation-delay: .05s;
+        }
+        
+        .letter:nth-child(2) {
+            animation-delay: .1s;
+        }
+        
+        .letter:nth-child(3) {
+            animation-delay: .15s;
+        }
+        
+        .letter:nth-child(4) {
+            animation-delay: .2s;
+        }
+        
+        .letter:nth-child(5) {
+            animation-delay: .25s;
+        }
+        
+        .letter:nth-child(6) {
+            animation-delay: .3s;
+        }
+        
+        .letter:nth-child(7) {
+            animation-delay: .35s;
+        }
+        
+        .letter:nth-child(8) {
+            animation-delay: .4s;
+        }
+        /* */

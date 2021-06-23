@@ -1,0 +1,81 @@
+/* coeur effets */
+
+@mixin button-path {
+    /*(effet pathfinder)*/
+    background: linear-gradient($color-secondary, $color-primary);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.text .button-heart {
+    position: absolute;
+    top: 110px;
+    right: 2%;
+    color: grey;
+    display: flex;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 4.5% 2% 0 0;
+    size: 1rem;
+    font-weight: 100;
+    font-size: large;
+    &--inactive {
+        position: absolute;
+        top: 0px;
+        right: 10%;
+        &:hover {
+            @include button-path;
+        }
+    }
+    &--checked {
+        position: absolute;
+        opacity: 0;
+        margin-right: 0;
+        top: 0px;
+        right: 10%;
+        &:hover {
+            opacity: 1;
+            @include button-path;
+            font-size: large;
+            margin-right: 0;
+            transition: opacity 300ms 200ms ease-in-out;
+        }
+    }
+}
+
+.cardSection .button-heart {
+    display: inline-block;
+    cursor: pointer;
+    ///margin: 3.5% 2% 0 0;
+    size: 1.5rem;
+    font-weight: 100;
+    color: grey;
+    position: relative;
+    font-size: xx-large;
+    align-items: center;
+    &--inactive {
+        position: absolute;
+        bottom: 20%;
+        right: 10%;
+        &:hover {
+            @include button-path;
+        }
+    }
+    &--checked {
+        opacity: 0;
+        position: absolute;
+        display: flex;
+        bottom: 20%;
+        right: 10%;
+        align-items: center;
+        &:hover {
+            opacity: 1;
+            @include button-path;
+            font-size: xx-large;
+            margin-right: 0;
+            transition: opacity 300ms 200ms ease-in-out;
+        }
+    }
+}

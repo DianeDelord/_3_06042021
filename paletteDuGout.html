@@ -16,17 +16,6 @@
 </head>
 
 <body>
-    <!-- loader -->
-    <div class="loader">
-        <span class="letter">o</span>
-        <span class="letter">h</span>
-        <span class="letter">m</span>
-        <span class="letter">y</span>
-        <span class="letter">f</span>
-        <span class="letter">o</span>
-        <span class="letter">o</span>
-        <span class="letter">d</span>
-    </div>
     <!-- Header -->
     <header>
         <section class="fixedStrip">
@@ -49,64 +38,71 @@
     <article class="cardSection">
         <div class="cardSection__title">
             <h5>La palette du goût</h5>
-            <i class="far fa-heart"></i>
+
+            <span class="button-heart">
+                <i class="far fa-heart button-heart--inactive "></i>
+                <i class="fas fa-heart button-heart--checked "></i>
+            </span>
+
         </div>
 
-        <div class="cardSection__checkbox">
-            <h6>Entrées</h6>
-            <div class="button__checkbox">
-                <p>Fricassée d'escargot</p>
-                <p>Au piment d'Espelette</p>
-                <p>25€</p>
-            </div>
-            <div class="button__checkbox">
-                <p>Foie gras de canard mi-cuit</p>
-                <p>Et ses copeaux de truffe noire</p>
-                <p>35€</p>
-            </div>
-            <div class="button__checkbox">
-                <p>Oeuf au plat</p>
-                <p>Assaisonné à la truffe sur lit de caviar</p>
-                <p>20€</p>
-            </div>
-            <h6>Plats</h6>
-            <div class="button__checkbox">
-                <p>Filet de boeuf aux herbes</p>
-                <p>Accompagné de sa ribambelle de légumes</p>
-                <p>40€</p>
-            </div>
-            <div class="button__checkbox">
-                <p>Parmentier de queue de boeuf</p>
-                <p>À la truffe noire sur sa purée de panais</p>
-                <p>35€</p>
-            </div>
-            <div class="button__checkbox">
-                <p>Filet de turbot</p>
-                <p>Aux agrumes</p>
-                <p>44€</p>
-            </div>
+        <h6>Entrées</h6>
 
-            <h6>Desserts</h6>
-            <div class="button__checkbox">
-                <p>Paris-Brest</p>
-                <p>Revisité</p>
-                <p>18€</p>
+        <section class="card-selection card-selection--1">
+            <div class="card-selection__content">
+                <div class="card-selection__text">
+                    <h3 class="card-selection__line1">Fricassée d'escargot</h3>
+                    <p class="card-selection__line2">Au piment d'espelette</p>
+                </div>
+                <p class="card-selection__sideText">25€</p>
+                <span class="card__slider">
+                    <i class=" card__slider--picto fas fa-check-circle"></i>
+                </span>
             </div>
-            <div class="button__checkbox">
-                <p>Macaron au chocolat d'exception</p>
-                <p>Et glace à la vanille de Madagascar</p>
-                <p>22€</p>
+        </section>
+
+        <section class="card-selection card-selection--2">
+            <div class="card-selection__content">
+                <div class="card-selection__text">
+                    <h3 class="card-selection__line1">Foie gras de canard mi-cuit</h3>
+                    <p class="card-selection__line2">Et ses copeaux de truffe noire</p>
+                </div>
+                <p class="card-selection__sideText">35€</p>
+                <span class="card__slider">
+                    <i class=" card__slider--picto fas fa-check-circle"></i>
+                </span>
             </div>
-            <div class="button__checkbox">
-                <p>Mousse au chocolat</p>
-                <p>Au piment d'Espelette et à la truffe noire</p>
-                <p>23€</p>
+        </section>
+
+        <section class="card-selection card-selection--3">
+            <div class="card-selection__content">
+                <div class="card-selection__text">
+                    <h3 class="card-selection__line1">Oeuf au plat</h3>
+                    <p class="card-selection__line2">Assaisonné à la truffe sur lit de caviar</p>
+                </div>
+                <p class="card-selection__sideText">20€</p>
+                <span class="card__slider">
+                    <i class=" card__slider--picto fas fa-check-circle"></i>
+                </span>
             </div>
-        </div>
-        <p class="btn btn--effect">
-            commander
-        </p>
+        </section>
+
+        <h6>Plats</h6>
+
+        <h6>Desserts</h6>
+
+
+
+
+
     </article>
+    <section class="order">
+        <a href="#">
+            <p class="btn btn--effect cmd">
+                Commander
+            </p>
+        </a>
+    </section>
 
 
     <!-- Footer  -->
