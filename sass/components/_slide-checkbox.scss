@@ -26,7 +26,7 @@ $delay-appearing :200ms;
     flex-direction: column;
     margin: 0;
     padding: 0;
-    animation: appearing 1.5s ease-in;
+    animation: appearing 1.5s ease-in-out;
     /* mon animation apparition des plats progressive */
     @for $i from 1 through 20 {
         &:nth-child(#{$i}) {
@@ -145,7 +145,7 @@ $delay-appearing :200ms;
 }
 
 
-/* hauteur de page classique avec
+/* hauteur de page classique =
 3 entrées, 3 plats et 3 desserts */
 
 $classic-height:900px;
@@ -175,46 +175,3 @@ $card-selection__content-height: 4.25rem;
         }
     }
 }
-
-
-/*
-
-.card-selection--1 {
-    animation-delay: 200ms;
-}
-
-.card-selection--2 {
-    animation-delay: 400ms;
-}
-
-.card-selection--3 {
-    animation-delay: 600ms;
-}
-
-.card-selection--4 {
-    animation-delay: 800ms;
-}
-
-.card-selection--5 {
-    animation-delay: 1000ms;
-}
-
-.card-selection--6 {
-    animation-delay: 1200ms;
-}
-
-.card-selection--7 {
-    animation-delay: 1400ms;
-}
-
-.card-selection--8 {
-    animation-delay: 1600ms;
-}
-
-.card-selection--9 {
-    animation-delay: 1800ms;
-}
-
-.card-selection--10 {
-    animation-delay: 2000ms;
-}*/

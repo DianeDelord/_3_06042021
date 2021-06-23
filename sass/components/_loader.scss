@@ -57,43 +57,12 @@
             -ms-animation: flash 1.2s ease-out 3s infinite;
             -o-animation: flash 1.2s ease-out 3s infinite;
             animation: flash 1.2s ease-out 3s infinite;
+            /* ma boucle de délais sur chaque lettre <3 */
             @for $i from 1 through 20 {
                 &:nth-child(#{$i}) {
-                    -webkit-animation-delay: (0.2s * $i);
-                    -moz-animation-delay: (0.2s * $i);
-                    animation-delay: (0.2s * $i);
+                    -webkit-animation-delay: (0.05s * $i);
+                    -moz-animation-delay: (0.05s * $i);
+                    animation-delay: (0.05s * $i);
                 }
             }
-        }
-        
-        .letter:nth-child(1) {
-            animation-delay: .05s;
-        }
-        
-        .letter:nth-child(2) {
-            animation-delay: .1s;
-        }
-        
-        .letter:nth-child(3) {
-            animation-delay: .15s;
-        }
-        
-        .letter:nth-child(4) {
-            animation-delay: .2s;
-        }
-        
-        .letter:nth-child(5) {
-            animation-delay: .25s;
-        }
-        
-        .letter:nth-child(6) {
-            animation-delay: .3s;
-        }
-        
-        .letter:nth-child(7) {
-            animation-delay: .35s;
-        }
-        
-        .letter:nth-child(8) {
-            animation-delay: .4s;
         }
