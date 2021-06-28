@@ -1,363 +1,417 @@
-        /* style.scss */
-        
-        @import "./utils/variables";
-        @import "./components/loader";
-        @import "./utils/mixins";
-        @import "./utils/fonctions";
-        @import "./components/heart-effects";
-        @import "./components/slide-checkbox";
-        body {
-            font-family: "Roboto", sans-serif;
-            width: 100%;
-            margin: 0;
-        }
-        /* Header */
-        
-        .welcomePage {
-            height: 305px;
-            width: 100%;
-        }
-        
-        .fixedStrip {
-            height: 40px;
-            width: 100%;
-            background-color: white;
-            @include centered;
-            background-size: 35%;
-            border-bottom: grey 1px;
-            box-shadow: 0px 5px 5px grey;
-            position: relative;
-            top: 0;
-        }
-        
-        .fixedStrip img {
-            height: 20px;
-        }
-        
-        nav {
-            height: 235px;
-            background-color: #f6f6f6;
-        }
-        
-        .localisation {
-            background-color: rgb(219, 214, 214);
-            height: 35px;
-            @include centered;
-            font-size: 80%;
-        }
-        
-        .fas {
-            margin-right: 6px;
-        }
-        
-        .welcomeText {
-            @include centered;
-            flex-direction: column;
-            width: 90%;
-            margin: auto;
-            align-content: center;
-            text-align: center;
-        }
-        
-        h1 {
-            @include centered;
-            flex-direction: column;
-            padding-top: 5%;
-            align-content: center;
-            text-align: center;
-            font-size: 110%;
-            hyphens: manual;
-        }
-        
-        .welcomeText p {
-            font-size: 75%;
-            hyphens: manual;
-            white-space: normal;
-            color: rgb(133, 130, 128);
-            margin: 0 0 13px;
-        }
-        
-        a {
-            text-decoration: none;
-        }
-        
-        .welcomeText a {
-            display: block;
-        }
-        
-        .btn {
-            @include centered;
-            padding: 0.2rem 0.4rem;
-            width: 100%;
-            font-size: 70%;
-            color: white;
-            height: 30px;
-            margin: 5px 0;
-            @include shadow-radius;
-            animation: gradient 5s ease-out 3s infinite;
-        }
-        /* Fonctionnement */
-        
-        h2 {
-            font-size: 100%;
-        }
-        
-        .card__step .fas {
-            font-size: small;
-        }
-        
-        .card {
-            padding: 2rem 2.5%;
-        }
-        
-        .container {
-            max-width: 1280px;
-            margin: auto;
-            position: relative;
-        }
-        
-        .card__title {
-            margin: 0 0 30px;
-        }
-        
-        .card__steps {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            counter-reset: countStep;
-        }
-        
-        .card__step {
-            padding: 1rem 1.5rem;
-            margin: 1rem 0 1rem .75rem;
-            box-shadow: 0.25rem 0.25rem 0.5rem grey;
-            border-radius: 1.25rem;
-            background-color: #f6f6f6;
-            display: flex;
-            position: relative;
-            align-items: center;
-            height: 30px;
-            &:hover {
-                background-color: lighten($color-primary, 35%);
-            }
-        }
-        
-        .card__step:first-child {
-            margin-top: 0;
-        }
-        
-        .card__step:before {
-            counter-increment: countStep 1;
-            content: counter(countStep) " ";
-            background: $color-primary;
-            height: 1.5rem;
-            width: 1.5rem;
-            border-radius: 100px;
-            @include centered;
-            color: white;
-            position: absolute;
-            left: -.75rem;
-        }
-        
-        .card__icon {
-            margin-right: 1rem;
-            color: #7e7e7e;
-        }
-        
-        .stepText {
-            font-size: 80%;
-        }
-        /* Restaurant */
-        
-        aside {
-            display: flex;
-            width: 100%;
-            flex-direction: column;
-            background-color: white;
-            padding-bottom: 20px;
-        }
-        
-        h4 {
-            font-size: 100%;
-            margin: 0;
-            padding: 30px 5% 15px;
-        }
-        
-        .cardPictureTop {
-            width: 95%;
-            border-radius: 10px;
-            box-shadow: 5px 5px 5px grey;
-            overflow: hidden;
-            margin: 0 2.5% 5% 2.5%;
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .cardPictureTop :nth-child(5) {
-            margin-bottom: 20%;
-        }
-        /* Dézoomer */
-        
-        .zoomOut {
-            transform: scale(1);
-            transition: .3s ease-in-out;
-        }
-        
-        .zoomOut:hover {
-            transform: scale(.95);
-        }
-        
-        .cardPictureTop a {
-            display: block;
-        }
-        /* */
-        
-        .cardPictureTop img {
-            width: 100%;
-            height: 130px;
-            object-fit: cover;
-            object-position: center;
-        }
-        
-        .text {
-            padding: 0.7em 0.7em;
-            line-height: 1.5em;
-        }
-        
-        h5 {
-            display: flex;
-            flex-direction: column;
-            margin: auto;
-            text-align: left;
-            color: black;
-            font-size: 95%;
-        }
-        
-        .text p {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            padding: 0;
-            margin: auto;
-            text-align: left;
-            color: black;
-            font-size: 90%;
-        }
-        
-        .nouveau {
-            background-color: $color-tertiary;
-            position: absolute;
-            top: 10px;
-            right: 3%;
-            border-radius: 2px;
-        }
-        
-        .nouveau p {
-            @include centered;
-            font-size: 50%;
-            color: #008766;
-            margin: auto;
-            height: 15px;
-            font-weight: bold;
-            width: 50px;
-        }
-        /* Footer */
-        
-        footer {
-            display: flex;
-            width: 100%;
-            height: 170px;
-            background-color: rgb(46, 44, 44);
-            padding: 0 0 20px;
-        }
-        
-        .footer__content {
-            margin: 7% 5%;
-        }
-        
-        .footer__img {
-            display: flex;
-            height: 20px;
-        }
-        
-        footer p {
-            font-size: 65%;
-            color: white;
-        }
-        
-        footer a {
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            text-decoration: underline;
-        }
-        /* palette du gout */
-        
-        .goBack {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            height: 20px;
-            background-color: white;
-        }
-        
-        .bigPicture img {
-            display: flex;
-            width: 100%;
-            height: 270px;
-            background-size: cover;
-            object-fit: cover;
-        }
-        /* choix menu */
-        
-        fieldset {
-            border: none;
-        }
-        
-        .cardSection__title {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .cardSection__title h5 {
-            font-family: 'Shrikhand', cursive;
-            display: flex;
-            justify-content: left;
-            font-size: x-large;
-            margin: 20px 0 10px;
-        }
-        
-        .cardSection h6 {
-            text-transform: uppercase;
-            border-bottom: solid 2px $color-tertiary;
-            padding-bottom: 3px;
-            margin-bottom: 15px;
-            width: 7%;
-        }
-        
-        h7 {
-            font-size: medium;
-            font-weight: 500;
-        }
-        
-        .order {
-            @include centered;
-            height: 80px;
-            padding-bottom: 10px;
-        }
-        
-        .cmd {
-            width: 50%;
-            height: 30px;
-            padding: 0px 30px;
-        }
-        /* reponsive tablette */
-        
-        @media all and (min-width: 769px) and (max-width: 1220px) {}
-        /* reponsive desktop */
-        
-        @media all and (min-width: 1220px) {}
+/* style.scss */
+
+@import "./utils/variables";
+@import "./components/loader";
+@import "./utils/mixins";
+@import "./utils/fonctions";
+@import "./components/heart-effects";
+@import "./components/slide-checkbox";
+body {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    margin: 0;
+}
+
+
+/* Header */
+
+.welcomePage {
+    height: 305px;
+    width: 100%;
+}
+
+.fixedStrip {
+    height: 40px;
+    width: 100%;
+    background-color: white;
+    @include centered;
+    background-size: 35%;
+    border-bottom: grey 1px;
+    box-shadow: 0px 5px 5px grey;
+    position: relative;
+    top: 0;
+}
+
+.fixedStrip img {
+    height: 20px;
+}
+
+nav {
+    height: 235px;
+    background-color: #f6f6f6;
+}
+
+.localisation {
+    background-color: rgb(219, 214, 214);
+    height: 35px;
+    @include centered;
+    font-size: 80%;
+}
+
+.fas {
+    margin-right: 6px;
+}
+
+.welcomeText {
+    @include centered;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+}
+
+h1 {
+    @include centered;
+    flex-direction: column;
+    padding-top: 5%;
+    align-content: center;
+    text-align: center;
+    font-size: 110%;
+    hyphens: manual;
+}
+
+.welcomeText p {
+    font-size: 75%;
+    hyphens: manual;
+    white-space: normal;
+    color: rgb(133, 130, 128);
+    margin: 0 0 13px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.welcomeText a {
+    display: block;
+}
+
+.btn {
+    @include centered;
+    padding: 0.2rem 0.5rem;
+    font-size: 70%;
+    color: white;
+    height: 30px;
+    margin: 5px 0;
+    @include shadow-radius;
+    animation: gradient 5s ease-out 3s infinite;
+}
+
+
+/* Fonctionnement */
+
+h2 {
+    font-size: 100%;
+}
+
+.card__step .fas {
+    font-size: small;
+}
+
+.card {
+    padding: 2rem 2.5%;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+    position: relative;
+}
+
+.card__title {
+    margin: 0 0 30px;
+}
+
+.card__steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: countStep;
+    @media all and (min-width: 769px) and (max-width: 1220px) {
+        display: flex;
+        justify-content: space-between;
+    }
+    @media all and (min-width: 1220px) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.card__step {
+    padding: 1rem 1.5rem;
+    margin: 1rem 0 1rem .75rem;
+    @include classic-and-hover-shadow;
+    border-radius: 1.25rem;
+    background-color: #f6f6f6;
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 30px;
+    &:hover {
+        background-color: lighten($color-primary, 35%);
+    }
+    @media all and (min-width: 769px) and (max-width: 1220px) {
+        width: -webkit-fill-available;
+        margin: 0 15px;
+    }
+    @media all and (min-width: 1220px) {
+        width: -webkit-fill-available;
+        margin: 0 15px;
+    }
+}
+
+.card__step:before {
+    counter-increment: countStep 1;
+    content: counter(countStep) " ";
+    background: $color-primary;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100px;
+    @include centered;
+    color: white;
+    position: absolute;
+    left: -.75rem;
+}
+
+.card__icon {
+    margin-right: 1rem;
+    color: #7e7e7e;
+}
+
+.stepText {
+    font-size: 80%;
+}
+
+
+/* Restaurant */
+
+aside {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    padding-bottom: 20px;
+    @media all and (min-width: 769px) and (max-width: 1220px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    @media all and (min-width: 1220px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 500px;
+    }
+}
+
+h4 {
+    font-size: 100%;
+    margin: 0;
+    padding: 30px 900px 15px 2.5%;
+}
+
+.cardPictureTop {
+    width: 95%;
+    border-radius: 10px;
+    @include classic-and-hover-shadow;
+    overflow: hidden;
+    margin: 0 2.5% 5% 2.5%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    @media all and (min-width: 769px) and (max-width: 1220px) {
+        min-width: 30%;
+        max-width: 40%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: auto;
+    }
+    @media all and (min-width: 1220px) {
+        min-width: 30%;
+        max-width: 40%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: auto;
+    }
+}
+
+.cardPictureTop :nth-child(5) {
+    margin-bottom: 20%;
+}
+
+
+/* Dézoomer */
+
+.zoomOut {
+    transform: scale(1);
+    transition: .3s ease-in-out;
+}
+
+.zoomOut:hover {
+    transform: scale(.95);
+}
+
+.cardPictureTop a {
+    display: block;
+}
+
+
+/* */
+
+.cardPictureTop img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.text {
+    padding: 0.7em 0.7em;
+    line-height: 1.5em;
+}
+
+h5 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: left;
+    color: black;
+    font-size: 95%;
+}
+
+.text p {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    margin: auto;
+    text-align: left;
+    color: black;
+    font-size: 90%;
+}
+
+.nouveau {
+    background-color: $color-tertiary;
+    position: absolute;
+    top: 10px;
+    right: 3%;
+    border-radius: 2px;
+}
+
+.nouveau p {
+    @include centered;
+    font-size: 50%;
+    color: #008766;
+    margin: auto;
+    height: 15px;
+    font-weight: bold;
+    width: 50px;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 170px;
+    background-color: rgb(46, 44, 44);
+    padding: 0 0 20px;
+}
+
+.footer__content {
+    margin: 7% 5%;
+}
+
+.footer__img {
+    display: flex;
+    height: 20px;
+}
+
+footer p {
+    font-size: 65%;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    font-weight: bolder;
+}
+
+
+/* retour page accueil depuis pages menus */
+
+.goBack {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 20px;
+    background-color: white;
+}
+
+.bigPicture img {
+    display: flex;
+    width: 100%;
+    height: 270px;
+    background-size: cover;
+    object-fit: cover;
+}
+
+
+/* choix menu */
+
+fieldset {
+    border: none;
+}
+
+.cardSection__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardSection__title h5 {
+    font-family: 'Shrikhand', cursive;
+    display: flex;
+    justify-content: left;
+    font-size: x-large;
+    margin: 20px 0 10px;
+}
+
+.cardSection h6 {
+    text-transform: uppercase;
+    border-bottom: solid 2px $color-tertiary;
+    padding-bottom: 3px;
+    margin-bottom: 15px;
+    width: 7%;
+}
+
+h7 {
+    font-size: medium;
+    font-weight: 500;
+}
+
+.order {
+    @include centered;
+    height: 80px;
+    padding-bottom: 10px;
+}
+
+.cmd {
+    width: 50%;
+    height: 30px;
+    padding: 0px 30px;
+}
+
+
+/* reponsive tablette */
+
+@media all and (min-width: 769px) and (max-width: 1220px) {}
+
+
+/* reponsive desktop */
+
+@media all and (min-width: 1220px) {}

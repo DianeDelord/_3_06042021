@@ -129,18 +129,7 @@
     animation-delay: 1s; }
 
 /* à compléter */
-/* éclaircir au survol la couleur de fond des boutons + ombre portée forcée */
-/*
-@mixin heading-shadow($colour: lightgrey) {
-    @if ( lightness($colour) < 25%) {
-        $colour: lighten($colour, 10%);
-    }
-    @else {
-        $colour: darken($colour, 10%);
-    }
-    box-shadow: darken($colour, 10%);
-}
-*/
+/* mixin pour les box-shadow + foncer la couleur de l'ombre au survol */
 /* dégradé bouton explorer */
 @keyframes gradient {
   0% {
@@ -549,15 +538,16 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.2rem 0.4rem;
-  width: 100%;
+  padding: 0.2rem 0.5rem;
   font-size: 70%;
   color: white;
   height: 30px;
   margin: 5px 0;
-  box-shadow: 0px 3px 5px grey;
+  box-shadow: 5px 5px 5px grey;
   border-radius: 25px;
   animation: gradient 5s ease-out 3s infinite; }
+  .btn:hover {
+    box-shadow: 5px 5px 5px #4d4d4d; }
 
 /* Fonctionnement */
 h2 {
@@ -582,11 +572,19 @@ h2 {
   padding: 0;
   list-style: none;
   counter-reset: countStep; }
+  @media all and (min-width: 769px) and (max-width: 1220px) {
+    .card__steps {
+      display: flex;
+      justify-content: space-between; } }
+  @media all and (min-width: 1220px) {
+    .card__steps {
+      display: flex;
+      justify-content: space-between; } }
 
 .card__step {
   padding: 1rem 1.5rem;
   margin: 1rem 0 1rem .75rem;
-  box-shadow: 0.25rem 0.25rem 0.5rem grey;
+  box-shadow: 5px 5px 5px grey;
   border-radius: 1.25rem;
   background-color: #f6f6f6;
   display: flex;
@@ -594,10 +592,17 @@ h2 {
   align-items: center;
   height: 30px; }
   .card__step:hover {
+    box-shadow: 5px 5px 5px #4d4d4d; }
+  .card__step:hover {
     background-color: #f2eafb; }
-
-.card__step:first-child {
-  margin-top: 0; }
+  @media all and (min-width: 769px) and (max-width: 1220px) {
+    .card__step {
+      width: -webkit-fill-available;
+      margin: 0 15px; } }
+  @media all and (min-width: 1220px) {
+    .card__step {
+      width: -webkit-fill-available;
+      margin: 0 15px; } }
 
 .card__step:before {
   counter-increment: countStep 1;
@@ -625,13 +630,22 @@ aside {
   display: flex;
   width: 100%;
   flex-direction: column;
-  background-color: white;
+  background-color: #f6f6f6;
   padding-bottom: 20px; }
+  @media all and (min-width: 769px) and (max-width: 1220px) {
+    aside {
+      flex-direction: row;
+      flex-wrap: wrap; } }
+  @media all and (min-width: 1220px) {
+    aside {
+      flex-direction: row;
+      flex-wrap: wrap;
+      min-height: 500px; } }
 
 h4 {
   font-size: 100%;
   margin: 0;
-  padding: 30px 5% 15px; }
+  padding: 30px 900px 15px 2.5%; }
 
 .cardPictureTop {
   width: 95%;
@@ -642,6 +656,22 @@ h4 {
   background-color: white;
   display: flex;
   flex-direction: column; }
+  .cardPictureTop:hover {
+    box-shadow: 5px 5px 5px #4d4d4d; }
+  @media all and (min-width: 769px) and (max-width: 1220px) {
+    .cardPictureTop {
+      min-width: 30%;
+      max-width: 40%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: auto; } }
+  @media all and (min-width: 1220px) {
+    .cardPictureTop {
+      min-width: 30%;
+      max-width: 40%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: auto; } }
 
 .cardPictureTop :nth-child(5) {
   margin-bottom: 20%; }
@@ -727,9 +757,9 @@ footer a {
   text-decoration: none; }
 
 footer a:hover {
-  text-decoration: underline; }
+  font-weight: bolder; }
 
-/* palette du gout */
+/* retour page accueil depuis pages menus */
 .goBack {
   position: absolute;
   top: 10px;

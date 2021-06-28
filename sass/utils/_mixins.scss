@@ -13,23 +13,19 @@
     }
 }
 
+@mixin btn-shadow {}
 
-/* éclaircir au survol la couleur de fond des boutons + ombre portée forcée */
 
+/* mixin pour les box-shadow + foncer la couleur de l'ombre au survol */
 
-/*
-@mixin heading-shadow($colour: lightgrey) {
-    @if ( lightness($colour) < 25%) {
-        $colour: lighten($colour, 10%);
+@mixin classic-and-hover-shadow($x-axis: 5px, $y-axis: 5px, $blur: 5px, $color:grey) {
+    box-shadow: $x-axis $y-axis $blur grey;
+    &:hover {
+        box-shadow: $x-axis $y-axis $blur darken($color: grey, $amount: 20%);
     }
-    @else {
-        $colour: darken($colour, 10%);
-    }
-    box-shadow: darken($colour, 10%);
 }
-*/
 
-@mixin shadow-radius ($shadow-size:$shadow, $radius:$radius25) {
-    box-shadow: $shadow;
+@mixin shadow-radius {
+    @include classic-and-hover-shadow;
     border-radius: $radius25;
 }
