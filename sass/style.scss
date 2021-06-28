@@ -107,7 +107,7 @@
         }
         
         .card {
-            padding: 2rem 1rem;
+            padding: 2rem 2.5%;
         }
         
         .container {
@@ -173,7 +173,6 @@
             display: flex;
             width: 100%;
             flex-direction: column;
-            height: 850px;
             background-color: white;
             padding-bottom: 20px;
         }
@@ -185,12 +184,11 @@
         }
         
         .cardPictureTop {
-            height: 195px;
-            width: 90%;
+            width: 95%;
             border-radius: 10px;
             box-shadow: 5px 5px 5px grey;
             overflow: hidden;
-            margin: 0 5% 5% 5%;
+            margin: 0 2.5% 5% 2.5%;
             background-color: white;
             display: flex;
             flex-direction: column;
@@ -217,14 +215,14 @@
         
         .cardPictureTop img {
             width: 100%;
-            height: 117px;
+            height: 130px;
             object-fit: cover;
             object-position: center;
         }
         
         .text {
-            padding: 0.2em 0.5em;
-            line-height: 1em;
+            padding: 0.7em 0.7em;
+            line-height: 1.5em;
         }
         
         h5 {
@@ -233,7 +231,7 @@
             margin: auto;
             text-align: left;
             color: black;
-            font-size: 90%;
+            font-size: 95%;
         }
         
         .text p {
@@ -243,8 +241,8 @@
             padding: 0;
             margin: auto;
             text-align: left;
-            color: grey;
-            font-size: 70%;
+            color: black;
+            font-size: 90%;
         }
         
         .nouveau {
