@@ -11,13 +11,6 @@
             width: 100%;
             margin: 0;
         }
-        /*
-        p {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-        */
         /* Header */
         
         .welcomePage {
@@ -62,12 +55,16 @@
             flex-direction: column;
             width: 90%;
             margin: auto;
-            height: 200px;
             align-content: center;
             text-align: center;
         }
         
-        .welcomeText h1 {
+        h1 {
+            @include centered;
+            flex-direction: column;
+            padding-top: 5%;
+            align-content: center;
+            text-align: center;
             font-size: 110%;
             hyphens: manual;
         }
@@ -254,17 +251,18 @@
             background-color: $color-tertiary;
             position: absolute;
             top: 10px;
-            left: 80%;
-            height: 15px;
-            width: 15%;
+            right: 3%;
+            border-radius: 2px;
         }
         
         .nouveau p {
             @include centered;
             font-size: 50%;
-            color: rgb(13, 110, 13);
+            color: #008766;
             margin: auto;
             height: 15px;
+            font-weight: bold;
+            width: 50px;
         }
         /* Footer */
         

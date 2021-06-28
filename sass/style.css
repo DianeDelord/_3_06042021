@@ -160,7 +160,6 @@
   box-sizing: border-box;
   cursor: pointer;
   margin: 4.5% 2% 0 0;
-  size: 1rem;
   font-weight: 100;
   font-size: large; }
   .text .button-heart--inactive {
@@ -195,10 +194,11 @@
 .cardSection .button-heart {
   display: inline-block;
   cursor: pointer;
-  size: 1.5rem;
   font-weight: 100;
   color: grey;
   position: relative;
+  top: 17px;
+  right: 25px;
   font-size: xx-large;
   align-items: center; }
   .cardSection .button-heart--inactive {
@@ -231,7 +231,7 @@
       margin-right: 0;
       transition: opacity 300ms 200ms ease-in-out; }
 
-/* animation */
+/* animation apparition des plats */
 @keyframes appearing {
   0% {
     opacity: 0; }
@@ -476,13 +476,6 @@ body {
   width: 100%;
   margin: 0; }
 
-/*
-p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-*/
 /* Header */
 .welcomePage {
   height: 305px;
@@ -526,11 +519,17 @@ nav {
   flex-direction: column;
   width: 90%;
   margin: auto;
-  height: 200px;
   align-content: center;
   text-align: center; }
 
-.welcomeText h1 {
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5%;
+  align-content: center;
+  text-align: center;
   font-size: 110%;
   hyphens: manual; }
 
@@ -694,18 +693,19 @@ h5 {
   background-color: #99E2D0;
   position: absolute;
   top: 10px;
-  left: 80%;
-  height: 15px;
-  width: 15%; }
+  right: 3%;
+  border-radius: 2px; }
 
 .nouveau p {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 50%;
-  color: #0d6e0d;
+  color: #008766;
   margin: auto;
-  height: 15px; }
+  height: 15px;
+  font-weight: bold;
+  width: 50px; }
 
 /* Footer */
 footer {
