@@ -454,10 +454,22 @@ h6 {
   padding: 2.5%;
   list-style-type: none;
   counter-reset: countSelection;
-  /* la longueur de cardSection s'adapte s'il y a + de plats que les 9 de base */ }
-  .cardSection .card-selection:before {
-    counter-increment: countSelection 1;
-    height: calc($classic-height+($card-selection__content-height*(countSelection-9))); }
+  /* la longueur de cardSection s'adapte s'il y a + de plats que les 9 de base */
+  /*
+  .card-selection:before {
+      counter-increment: countSelection 1;
+      @if countSelection==9 {
+          height: $classic-height;
+      }
+      @else {
+          height: calc($classic-height+($card-selection__content-height*(countSelection-9)));
+      }
+  } */
+  /*
+  .card-selection:before {
+      counter-increment: countSelection 1;
+      height: calc($card-selection__content-height*countSelection);
+  }*/ }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -572,11 +584,7 @@ h2 {
   padding: 0;
   list-style: none;
   counter-reset: countStep; }
-  @media all and (min-width: 769px) and (max-width: 1220px) {
-    .card__steps {
-      display: flex;
-      justify-content: space-between; } }
-  @media all and (min-width: 1220px) {
+  @media all and (min-width: 769px) {
     .card__steps {
       display: flex;
       justify-content: space-between; } }
@@ -595,11 +603,7 @@ h2 {
     box-shadow: 5px 5px 5px #4d4d4d; }
   .card__step:hover {
     background-color: #f2eafb; }
-  @media all and (min-width: 769px) and (max-width: 1220px) {
-    .card__step {
-      width: -webkit-fill-available;
-      margin: 0 15px; } }
-  @media all and (min-width: 1220px) {
+  @media all and (min-width: 769px) {
     .card__step {
       width: -webkit-fill-available;
       margin: 0 15px; } }
@@ -632,7 +636,7 @@ aside {
   flex-direction: column;
   background-color: #f6f6f6;
   padding-bottom: 20px; }
-  @media all and (min-width: 769px) and (max-width: 1220px) {
+  @media all and (min-width: 769px) {
     aside {
       flex-direction: row;
       flex-wrap: wrap; } }
@@ -645,7 +649,10 @@ aside {
 h4 {
   font-size: 100%;
   margin: 0;
-  padding: 30px 900px 15px 2.5%; }
+  padding: 30px 0px 15px 2.5%; }
+  @media all and (min-width: 769px) {
+    h4 {
+      width: 90%; } }
 
 .cardPictureTop {
   width: 95%;
@@ -658,20 +665,14 @@ h4 {
   flex-direction: column; }
   .cardPictureTop:hover {
     box-shadow: 5px 5px 5px #4d4d4d; }
-  @media all and (min-width: 769px) and (max-width: 1220px) {
+  @media all and (min-width: 769px) {
     .cardPictureTop {
       min-width: 30%;
       max-width: 40%;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin: auto; } }
-  @media all and (min-width: 1220px) {
-    .cardPictureTop {
-      min-width: 30%;
-      max-width: 40%;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin: auto; } }
+      margin: auto;
+      margin-bottom: 20px; } }
 
 .cardPictureTop :nth-child(5) {
   margin-bottom: 20%; }
@@ -738,9 +739,8 @@ h5 {
 footer {
   display: flex;
   width: 100%;
-  height: 170px;
   background-color: #2e2c2c;
-  padding: 0 0 20px; }
+  padding: 5px 0 10px; }
 
 .footer__content {
   margin: 7% 5%; }
@@ -752,6 +752,10 @@ footer {
 footer p {
   font-size: 65%;
   color: white; }
+  @media all and (min-width: 769px) {
+    footer p {
+      margin: 25px 0 0;
+      font-size: 80%; } }
 
 footer a {
   text-decoration: none; }
@@ -773,6 +777,12 @@ footer a:hover {
   height: 270px;
   background-size: cover;
   object-fit: cover; }
+  @media all and (min-width: 769px) and (max-width: 1220px) {
+    .bigPicture img {
+      min-height: 350px; } }
+  @media all and (min-width: 1220px) {
+    .bigPicture img {
+      min-height: 400px; } }
 
 /* choix menu */
 fieldset {
@@ -813,8 +823,5 @@ h7 {
   width: 50%;
   height: 30px;
   padding: 0px 30px; }
-
-/* reponsive tablette */
-/* reponsive desktop */
 
 /*# sourceMappingURL=style.css.map */

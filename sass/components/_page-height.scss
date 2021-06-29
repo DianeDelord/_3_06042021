@@ -1,0 +1,36 @@
+/* hauteur de page classique =
+3 entrées, 3 plats et 3 desserts */
+
+$classic-height:900px;
+$card-selection__content-height: 4.25rem;
+.cardSection {
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    background-color: white;
+    position: relative;
+    top: -50px;
+    /*height: $classic-height;*/
+    width: 95%;
+    margin: 0;
+    padding: 2.5%;
+    list-style-type: none;
+    counter-reset: countSelection;
+    /* la longueur de cardSection s'adapte s'il y a + de plats que les 9 de base */
+    /*
+    .card-selection:before {
+        counter-increment: countSelection 1;
+        @if countSelection==9 {
+            height: $classic-height;
+        }
+        @else {
+            height: calc($classic-height+($card-selection__content-height*(countSelection-9)));
+        }
+    } */
+    /*
+    .card-selection:before {
+        counter-increment: countSelection 1;
+        height: calc($card-selection__content-height*countSelection);
+    }*/
+}

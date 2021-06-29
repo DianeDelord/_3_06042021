@@ -27,5 +27,5 @@
 
 @mixin shadow-radius {
     @include classic-and-hover-shadow;
-    border-radius: $radius25;
+    border-radius: $radius25
 }
