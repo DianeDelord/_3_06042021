@@ -17,12 +17,10 @@ body {
 /* Header */
 
 .welcomePage {
-    height: 305px;
     width: 100%;
 }
 
 .fixedStrip {
-    height: 40px;
     width: 100%;
     background-color: white;
     @include centered;
@@ -34,19 +32,22 @@ body {
 }
 
 .fixedStrip img {
-    height: 20px;
+    height: 25px;
+    padding: 10px 0;
+}
+
+.no-shadow {
+    box-shadow: none;
 }
 
 nav {
-    height: 235px;
     background-color: #f6f6f6;
 }
 
 .localisation {
     background-color: rgb(219, 214, 214);
-    height: 35px;
     @include centered;
-    font-size: 80%;
+    font-size: 90%;
 }
 
 .fas {
@@ -60,6 +61,7 @@ nav {
     margin: auto;
     align-content: center;
     text-align: center;
+    padding-bottom: 35px;
 }
 
 h1 {
@@ -68,12 +70,12 @@ h1 {
     padding-top: 5%;
     align-content: center;
     text-align: center;
-    font-size: 110%;
+    font-size: 125%;
     hyphens: manual;
 }
 
 .welcomeText p {
-    font-size: 75%;
+    font-size: 90%;
     hyphens: manual;
     white-space: normal;
     color: rgb(133, 130, 128);
@@ -90,8 +92,8 @@ a {
 
 .btn {
     @include centered;
-    padding: 0.2rem 0.5rem;
-    font-size: 70%;
+    padding: 0.4rem 1.5rem;
+    font-size: 90%;
     color: white;
     height: 30px;
     margin: 5px 0;
@@ -103,11 +105,11 @@ a {
 /* Fonctionnement */
 
 h2 {
-    font-size: 100%;
+    font-size: 125%;
 }
 
 .card__step .fas {
-    font-size: small;
+    font-size: large;
 }
 
 .card {
@@ -173,18 +175,18 @@ h2 {
 }
 
 .stepText {
-    font-size: 80%;
+    font-size: 100%;
 }
 
 
 /* Restaurant */
 
-aside {
+main {
     display: flex;
     width: 100%;
     flex-direction: column;
     background-color: #f6f6f6;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     @media all and (min-width: 769px) {
         flex-direction: row;
         flex-wrap: wrap;
@@ -197,9 +199,9 @@ aside {
 }
 
 h4 {
-    font-size: 100%;
+    font-size: 125%;
     margin: 0;
-    padding: 30px 0px 15px 2.5%;
+    padding: 30px 0px 30px 2.5%;
     @media all and (min-width: 769px) {
         width: 90%;
     }
@@ -265,7 +267,7 @@ h5 {
     margin: auto;
     text-align: left;
     color: black;
-    font-size: 95%;
+    font-size: 110%;
 }
 
 .text p {
@@ -276,7 +278,7 @@ h5 {
     margin: auto;
     text-align: left;
     color: black;
-    font-size: 90%;
+    font-size: 100%;
 }
 
 .nouveau {
@@ -289,12 +291,12 @@ h5 {
 
 .nouveau p {
     @include centered;
-    font-size: 50%;
+    font-size: 60%;
     color: #008766;
     margin: auto;
-    height: 15px;
+    height: 20px;
     font-weight: bold;
-    width: 50px;
+    width: 60px;
 }
 
 
@@ -317,7 +319,7 @@ footer {
 }
 
 footer p {
-    font-size: 65%;
+    font-size: 80%;
     color: white;
     @media all and (min-width: 769px) {
         margin: 25px 0 0;
@@ -376,7 +378,7 @@ fieldset {
     font-family: 'Shrikhand', cursive;
     display: flex;
     justify-content: left;
-    font-size: x-large;
+    font-size: 158%;
     margin: 20px 0 10px;
 }
 
@@ -385,7 +387,8 @@ fieldset {
     border-bottom: solid 2px $color-tertiary;
     padding-bottom: 3px;
     margin-bottom: 15px;
-    width: 7%;
+    width: 12%;
+    font-size: 100%;
 }
 
 h7 {
@@ -400,7 +403,7 @@ h7 {
 }
 
 .cmd {
-    width: 50%;
     height: 30px;
-    padding: 0px 30px;
+    padding: 5px 50px;
+    margin-bottom: 48px;
 }
