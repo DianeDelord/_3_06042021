@@ -17,7 +17,8 @@ $card-selection__content-height: 4.25rem;
     padding: 2.5%;
     list-style-type: none;
     counter-reset: countSelection;
-    /* la longueur de cardSection s'adapte s'il y a + de plats que les 9 de base */
+    /* la longueur de cardSection s'adapte s'il y a + de plats que les 9 de base,
+     bon, en fait ça ne me sert à rien */
     /*
     .card-selection:before {
         counter-increment: countSelection 1;

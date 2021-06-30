@@ -29,3 +29,11 @@
     @include classic-and-hover-shadow;
     border-radius: $radius25
 }
+
+@mixin card-selection__content-shadow($x-axis: 0px, $y-axis: 5px, $blur: 15px, $color:grey) {
+    box-shadow: $x-axis $y-axis $blur grey;
+    &:hover {
+        box-shadow: $x-axis $y-axis $blur darken($color: grey, $amount: 20%);
+        transition: box-shadow 400ms;
+    }
+}
