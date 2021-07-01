@@ -18,7 +18,6 @@
   to {
     overflow: hidden;
     visibility: hidden; } }
-/* loader */
 .loader {
   display: flex;
   position: absolute;
@@ -431,7 +430,7 @@ h6 {
   opacity: 1;
   transition: transform 500ms ease-in-out; }
 
-.card-selection__content:hover .card__slider > .card__slider--picto {
+.card-selection__content:hover .card__slider--picto {
   transform: rotate(360deg);
   transition: transform 700ms ease-in-out; }
 
@@ -811,7 +810,7 @@ fieldset {
   border-bottom: solid 2px #99E2D0;
   padding-bottom: 3px;
   margin-bottom: 15px;
-  width: 12%;
+  width: 40px;
   font-size: 100%; }
 
 h7 {
