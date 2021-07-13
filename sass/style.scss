@@ -149,6 +149,9 @@ h2 {
     height: 30px;
     &:hover {
         background-color: lighten($color-primary, 35%);
+        .card__icon {
+            color: $color-primary;
+        }
     }
     @media all and (min-width: 769px) {
         width: -webkit-fill-available;

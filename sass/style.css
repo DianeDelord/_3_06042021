@@ -360,9 +360,9 @@ h6 {
   margin-bottom: 12px;
   overflow-x: hidden;
   cursor: pointer;
-  box-shadow: 0px 5px 15px grey; }
+  box-shadow: 0px 5px 15px lightgrey; }
   .card-selection__content:hover {
-    box-shadow: 0px 5px 15px #4d4d4d;
+    box-shadow: 0px 5px 15px #adadad;
     transition: box-shadow 400ms; }
 
 .card-selection__text {
@@ -417,7 +417,7 @@ h6 {
     display: inline-block;
     position: absolute;
     top: 24px;
-    left: 16px;
+    left: 20px;
     color: #fff;
     font-size: 24px; }
 
@@ -559,11 +559,11 @@ a {
   color: white;
   height: 30px;
   margin: 5px 0;
-  box-shadow: 5px 5px 5px grey;
+  box-shadow: 5px 5px 5px lightgrey;
   border-radius: 25px;
   animation: gradient 5s ease-out 3s infinite; }
   .btn:hover {
-    box-shadow: 5px 5px 5px #4d4d4d; }
+    box-shadow: 5px 5px 5px #adadad; }
 
 /* Fonctionnement */
 h2 {
@@ -596,7 +596,7 @@ h2 {
 .card__step {
   padding: 1rem 1.5rem;
   margin: 1rem 0 1rem .75rem;
-  box-shadow: 5px 5px 5px grey;
+  box-shadow: 5px 5px 5px lightgrey;
   border-radius: 1.25rem;
   background-color: #f6f6f6;
   display: flex;
@@ -604,9 +604,11 @@ h2 {
   align-items: center;
   height: 30px; }
   .card__step:hover {
-    box-shadow: 5px 5px 5px #4d4d4d; }
+    box-shadow: 5px 5px 5px #adadad; }
   .card__step:hover {
     background-color: #f2eafb; }
+    .card__step:hover .card__icon {
+      color: #9356DC; }
   @media all and (min-width: 769px) {
     .card__step {
       width: -webkit-fill-available;
@@ -661,14 +663,14 @@ h4 {
 .cardPictureTop {
   width: 95%;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px grey;
+  box-shadow: 5px 5px 5px lightgrey;
   overflow: hidden;
   margin: 0 2.5% 5% 2.5%;
   background-color: white;
   display: flex;
   flex-direction: column; }
   .cardPictureTop:hover {
-    box-shadow: 5px 5px 5px #4d4d4d; }
+    box-shadow: 5px 5px 5px #adadad; }
   @media all and (min-width: 769px) {
     .cardPictureTop {
       min-width: 30%;

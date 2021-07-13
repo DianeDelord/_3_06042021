@@ -18,10 +18,10 @@
 
 /* mixin pour les box-shadow + foncer la couleur de l'ombre au survol */
 
-@mixin classic-and-hover-shadow($x-axis: 5px, $y-axis: 5px, $blur: 5px, $color:grey) {
-    box-shadow: $x-axis $y-axis $blur grey;
+@mixin classic-and-hover-shadow($x-axis: 5px, $y-axis: 5px, $blur: 5px, $color:lightgrey) {
+    box-shadow: $x-axis $y-axis $blur lightgrey;
     &:hover {
-        box-shadow: $x-axis $y-axis $blur darken($color: grey, $amount: 20%);
+        box-shadow: $x-axis $y-axis $blur darken($color: lightgrey, $amount: 15%);
     }
 }
 
@@ -30,10 +30,10 @@
     border-radius: $radius25
 }
 
-@mixin card-selection__content-shadow($x-axis: 0px, $y-axis: 5px, $blur: 15px, $color:grey) {
-    box-shadow: $x-axis $y-axis $blur grey;
+@mixin card-selection__content-shadow($x-axis: 0px, $y-axis: 5px, $blur: 15px, $color:lightgrey) {
+    box-shadow: $x-axis $y-axis $blur lightgrey;
     &:hover {
-        box-shadow: $x-axis $y-axis $blur darken($color: grey, $amount: 20%);
+        box-shadow: $x-axis $y-axis $blur darken($color: lightgrey, $amount: 15%);
         transition: box-shadow 400ms;
     }
 }
